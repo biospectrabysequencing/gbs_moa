@@ -1,0 +1,6 @@
+Failed to munge '/home/hramwd/cpan/5.10.1/lib/perl5/site_perl'
+Failed to munge '/home/hramwd/cpan/5.10.1/lib64/perl5'
+Failed to munge '/home/hramwd/cpan/5.10.1/lib64/perl5/site_perl'
+Failed to munge '/home/hramwd/NGSUserGroup/trunk/perl/modules'
+run_pipeline.pl  -Xms512m -Xmx1g -configFile ./PivotTaxaTBTHDF5.xml
+

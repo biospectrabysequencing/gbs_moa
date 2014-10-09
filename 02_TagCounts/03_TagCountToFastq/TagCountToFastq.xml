@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+ <TasselPipeline>
+    <fork1>
+        <TagCountToFastqPlugin>
+            <i>../02_MergedTagCounts/GBS_Workshop_Maize.cnt</i>
+            <o>./GBS_Workshop_Maize.fq</o>
+            <c>5</c>
+        </TagCountToFastqPlugin>
+    </fork1>
+    <runfork1/>
+</TasselPipeline>

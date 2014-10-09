@@ -1,0 +1,3 @@
+jobid: 02_MergedTagCounts
+process: run_pipeline.pl -Xms512m -Xmx1g -configFile MergeTagCounts.xml
+title: Merge tag count files

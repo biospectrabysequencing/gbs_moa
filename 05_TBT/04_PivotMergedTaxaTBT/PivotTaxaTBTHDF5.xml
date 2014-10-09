@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+ <TasselPipeline>
+    <fork1>
+        <ModifyTBTHDF5Plugin>
+            <o>../01_IndividualTBT/GBS_Workshop_Maize.h5</o>
+            <p>./PivotTaxaTBTHDF5.h5</p>
+            <L>./PivotTaxaTBTHDF5.log</L>
+            <c></c>
+        </ModifyTBTHDF5Plugin>
+    </fork1>
+    <runfork1/>
+</TasselPipeline>

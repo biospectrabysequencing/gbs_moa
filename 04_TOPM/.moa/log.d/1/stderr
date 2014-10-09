@@ -1,0 +1,25 @@
+Failed to munge '/home/hramwd/cpan/5.10.1/lib/perl5/site_perl'
+Failed to munge '/home/hramwd/cpan/5.10.1/lib64/perl5'
+Failed to munge '/home/hramwd/cpan/5.10.1/lib64/perl5/site_perl'
+Failed to munge '/home/hramwd/NGSUserGroup/trunk/perl/modules'
+run_pipeline.pl -Xms512m -Xmx1g -configFile SAMConverter.xml
+java.io.FileNotFoundException: /tmp/hramwd/GBS_Workshop/05_TBT/SAMConverter.xml (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:140)
+	at java.io.FileInputStream.<init>(FileInputStream.java:96)
+	at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:87)
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:178)
+	at java.net.URL.openStream(URL.java:1031)
+	at org.apache.xerces.impl.XMLEntityManager.setupCurrentEntity(Unknown Source)
+	at org.apache.xerces.impl.XMLVersionDetector.determineDocVersion(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.DTDConfiguration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:205)
+	at net.maizegenetics.pipeline.TasselPipelineXMLUtil.readXMLAsArgs(TasselPipelineXMLUtil.java:264)
+	at net.maizegenetics.pipeline.TasselPipeline.parseArgs(TasselPipeline.java:169)
+	at net.maizegenetics.pipeline.TasselPipeline.<init>(TasselPipeline.java:121)
+	at net.maizegenetics.pipeline.TasselPipeline.main(TasselPipeline.java:161)
+

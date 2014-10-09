@@ -1,0 +1,10 @@
+Input file: /workspace/2/CommonWorkspace/hramwd/GBS_Workshop/04_TOPM/../03_SAM/GBS_Workshop_Maize.sam
+Output file: ./GBS_Workshop_Maize.topm
+Total 52092 tags
+	51977 were aligned to unique postions
+	115 were aligned to multiple postions
+	0 could not be aligned.
+
+nPositions  nTags
+1           51977
+99          115

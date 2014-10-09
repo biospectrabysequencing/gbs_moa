@@ -1,0 +1,71 @@
+/software/x86_64/tassel-3.0/lib/gdpc.jar:/software/x86_64/tassel-3.0/lib/batik-util.jar:/software/x86_64/tassel-3.0/lib/wsdl4j-1.6.2.jar:/software/x86_64/tassel-3.0/lib/XmlSchema-1.3.1.jar:/software/x86_64/tassel-3.0/lib/xml.jar:/software/x86_64/tassel-3.0/lib/jfreechart-1.0.3.jar:/software/x86_64/tassel-3.0/lib/poi-3.0.1-FINAL-20070705.jar:/software/x86_64/tassel-3.0/lib/mail-1.4.jar:/software/x86_64/tassel-3.0/lib/commons-lang-2.1.jar:/software/x86_64/tassel-3.0/lib/commons-dbcp-1.2.1.jar:/software/x86_64/tassel-3.0/lib/xmlParserAPIs.jar:/software/x86_64/tassel-3.0/lib/biojava3-core-3.0.jar:/software/x86_64/tassel-3.0/lib/commons-discovery.jar:/software/x86_64/tassel-3.0/lib/ejml-0.13.jar:/software/x86_64/tassel-3.0/lib/axis2-kernel-1.2.jar:/software/x86_64/tassel-3.0/lib/jgrapht-0.5.3.jar:/software/x86_64/tassel-3.0/lib/geronimo-spec-activation-1.0.2-rc4.jar:/software/x86_64/tassel-3.0/lib/colt.jar:/software/x86_64/tassel-3.0/lib/axiom-api-1.2.4.jar:/software/x86_64/tassel-3.0/lib/batik-svg-dom.jar:/software/x86_64/tassel-3.0/lib/log4j-1.2.13.jar:/software/x86_64/tassel-3.0/lib/batik-ext.jar:/software/x86_64/tassel-3.0/lib/ssj.jar:/software/x86_64/tassel-3.0/lib/commons-codec-1.3.jar:/software/x86_64/tassel-3.0/lib/mysql-connector-java-3.1.13-bin.jar:/software/x86_64/tassel-3.0/lib/batik-awt-util.jar:/software/x86_64/tassel-3.0/lib/forester.jar:/software/x86_64/tassel-3.0/lib/batik-parser.jar:/software/x86_64/tassel-3.0/lib/commons-httpclient-3.0.1.jar:/software/x86_64/tassel-3.0/lib/commons-pool-1.3.jar:/software/x86_64/tassel-3.0/lib/axiom-impl-1.2.4.jar:/software/x86_64/tassel-3.0/lib/batik-dom.jar:/software/x86_64/tassel-3.0/lib/biojava3-phylo-3.0.jar:/software/x86_64/tassel-3.0/lib/crimson-parser.jar:/software/x86_64/tassel-3.0/lib/batik-gvt.jar:/software/x86_64/tassel-3.0/lib/batik-gui-util.jar:/software/x86_64/tassel-3.0/lib/commons-math-2.2.jar:/software/x86_64/tassel-3.0/lib/commons-logging-1.1.jar:/software/x86_64/tassel-3.0/lib/cisd-jhdf5-batteries_included_lin_win_mac.jar:/software/x86_64/tassel-3.0/lib/batik-xml.jar:/software/x86_64/tassel-3.0/lib/LiuExt.jar:/software/x86_64/tassel-3.0/lib/jung-1.7.5.jar:/software/x86_64/tassel-3.0/lib/commons-configuration-1.2.jar:/software/x86_64/tassel-3.0/lib/xercesImpl.jar:/software/x86_64/tassel-3.0/lib/lzma-4.63-jio-0.93.jar:/software/x86_64/tassel-3.0/lib/batik-svggen.jar:/software/x86_64/tassel-3.0/lib/batik-css.jar:/software/x86_64/tassel-3.0/lib/commons-collections-3.1.jar:/software/x86_64/tassel-3.0/lib/jcommon-1.0.6.jar:/software/x86_64/tassel-3.0/lib/junit-4.1.jar:/software/x86_64/tassel-3.0/lib/biojava3-alignment-3.0.jar:/software/x86_64/tassel-3.0/sTASSEL.jar
+Memory Settings: -Xms512m -Xmx1g
+Tassel Pipeline Arguments: -configFile ./SNP_Caller.xml
+[main] INFO net.maizegenetics.pipeline.TasselPipeline - Tassel Version: 3.0.158  Date: July 18, 2013
+File = ../04_TOPM/GBS_Workshop_Maize.topm
+TagMapFile Row Read:0
+Count of Tags=52092
+initPhysicalSort
+Position index sort begin.
+Position index sort end.
+INFO - 
+
+
+The available options for the TagsToSNPByAlignmentPlugin are as follows:
+-i       Input .tbt file
+-y       Use byte-formatted TBT file (*.tbt.byte)
+-m       TagsOnPhysicalMap file containing genomic position of tags
+-mUpd    Update TagsOnPhysicalMap file with allele calls, saved to specified file
+-o       Output directory (default current directory)
+-mxSites Maximum number of sites (SNPs) output per chromosome (default: 200000)
+-mnF     Minimum F (inbreeding coefficient) (default: 0.8  = no filter)
+-p       Pedigree file containing full sample names (or expected names after merging) & expected inbreeding
+         coefficient (F) for each.  Only taxa with expected F >= mnF used to calculate F = 1-Ho/He.
+         (default: use ALL taxa to calculate F)
+-mnMAF   Minimum minor allele frequency (default: 0.02)
+-mnMAC   Minimum minor allele count (default: 100000)
+-mnLCov  Minimum locus coverage (proportion of Taxa with a genotype) (default: 0.1)
+-errRate Average sequencing error rate per base (used to decide between heterozygous and homozygous calls) (default: 0.01)
+-ref     Path to reference genome in fasta format. Ensures that a tag from the reference genome is always included
+         when the tags at a locus are aligned against each other to call SNPs. The reference allele for each site
+         is then provided in the output HapMap files, under the taxon name "REFERENCE_GENOME" (first taxon).
+         DEFAULT: Don't use reference genome.
+-inclRare  Include the rare alleles at site (3 or 4th states) (default: false)
+-inclGaps  Include sites where major or minor allele is a GAP (default: false)
+-callBiSNPsWGap  Include sites where the third allele is a GAP (default: false)
+-s       Start chromosome
+-e       End chromosome
+
+
+
+[main] INFO net.maizegenetics.gbs.pipeline.TagsToSNPByAlignmentPlugin - 
+
+
+The available options for the TagsToSNPByAlignmentPlugin are as follows:
+-i       Input .tbt file
+-y       Use byte-formatted TBT file (*.tbt.byte)
+-m       TagsOnPhysicalMap file containing genomic position of tags
+-mUpd    Update TagsOnPhysicalMap file with allele calls, saved to specified file
+-o       Output directory (default current directory)
+-mxSites Maximum number of sites (SNPs) output per chromosome (default: 200000)
+-mnF     Minimum F (inbreeding coefficient) (default: 0.8  = no filter)
+-p       Pedigree file containing full sample names (or expected names after merging) & expected inbreeding
+         coefficient (F) for each.  Only taxa with expected F >= mnF used to calculate F = 1-Ho/He.
+         (default: use ALL taxa to calculate F)
+-mnMAF   Minimum minor allele frequency (default: 0.02)
+-mnMAC   Minimum minor allele count (default: 100000)
+-mnLCov  Minimum locus coverage (proportion of Taxa with a genotype) (default: 0.1)
+-errRate Average sequencing error rate per base (used to decide between heterozygous and homozygous calls) (default: 0.01)
+-ref     Path to reference genome in fasta format. Ensures that a tag from the reference genome is always included
+         when the tags at a locus are aligned against each other to call SNPs. The reference allele for each site
+         is then provided in the output HapMap files, under the taxon name "REFERENCE_GENOME" (first taxon).
+         DEFAULT: Don't use reference genome.
+-inclRare  Include the rare alleles at site (3 or 4th states) (default: false)
+-inclGaps  Include sites where major or minor allele is a GAP (default: false)
+-callBiSNPsWGap  Include sites where the third allele is a GAP (default: false)
+-s       Start chromosome
+-e       End chromosome
+
+
+
+[main] ERROR net.maizegenetics.pipeline.TasselPipeline - java.lang.IllegalArgumentException: Please specify start and end chromosome numbers.

@@ -1,0 +1,99 @@
+moa simple -t 'Convert sam tags to tags on physical map (TOPM)'
+moa run
+moa process
+moa status
+more SAMConverter
+more SAMConverter.xml
+ls -la
+pwd
+cd -
+pwd
+cd 05_TBT/
+cd 05_TBT/
+ls -la
+cd ../04_TOPM/
+ls -la
+moa run
+ls -la
+more SAMConverter.xml
+cd 04_TOPM/
+ls -la
+moa status
+cp SAMConverter.xml SAMConverter2.xml
+vi SAMConverter2.xml
+moa set process
+moa run
+moa set process
+moa run
+ls -la
+rm *.topm*
+ls -la
+moa run
+ls -la
+vi SAMConverter2.xml
+moa run
+ls -la
+moa run
+ls -la
+vi SAMConverter2.xml
+moa run
+ls -la
+samtools view ../04_TOPM/
+samtools view ../03_SAM/
+samtools view ../03_SAM/GBS_Workshop_Maize.sam
+samtools view ../03_SAM/GBS_Workshop_Maize.bam
+samtools view -h ../03_SAM/GBS_Workshop_Maize.bam
+samtools view -H ../03_SAM/GBS_Workshop_Maize.bam | more
+samtools view -H ../03_SAM/GBS_Workshop_Maize.bam
+samtools view -h ../03_SAM/GBS_Workshop_Maize.bam | more
+samtools view ../03_SAM/GBS_Workshop_Maize.bam | more
+vi SAMConverter2.xml
+moa run
+ls -la
+more SAMConverter2.xml
+more SAMConverter2.xml
+vi SAMConverter2.xml
+moa run
+vi SAMConverter2.xml
+moa run
+ls -la
+rm SAMConverter2.xml
+ls -la
+cd ../04_TOPM/
+ls -la
+moa status
+moa run
+ls -la
+cp SAMConverter.xml SAMConverter2.xml
+vi SAMConverter2.xml
+vi SAMConverter2.xml
+vi SAMConverter2.xml
+vi SAMConverter2.xml
+vi SAMConverter2.xml
+vi SAMConverter2.xml
+vi SAMConverter2.xml
+moa run
+ls -la
+moa set process
+moa run
+cd -
+ls -la
+cd 04_TOPM/
+ls -la
+moa status
+cd 04_TOPM/
+cd 04_TOPM/
+moa status
+moa run
+ls -la
+moa status
+more SAMConverter.xml
+more SAMConverter2.xml
+cd 04_TOPM/
+cd 04_TOPM/
+ls -la
+more GBS_Workshop_Maize.topm
+more GBS_Workshop_Maize..log
+ls -la
+cd 04_TOPM/
+ll

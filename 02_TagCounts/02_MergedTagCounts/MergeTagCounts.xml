@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+ <TasselPipeline>
+    <fork1>
+        <MergeMultipleTagCountPlugin>
+            <i>../01_IndividualTagCounts</i>
+            <o>./GBS_Workshop_Maize.cnt</o>
+            <c>5</c>
+        </MergeMultipleTagCountPlugin>
+    </fork1>
+    <runfork1/>
+</TasselPipeline>

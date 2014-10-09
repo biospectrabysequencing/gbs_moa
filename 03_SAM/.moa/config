@@ -1,0 +1,4 @@
+jobid: 03_SAM
+process: bowtie2 -M 4 -p 15 --very-sensitive-local -x ../53_AlignerIdices/GBS_Workshop_Maize
+  -U ../02_TagCounts/03_TagCountToFastq/GBS_Workshop_Maize.fq -S GBS_Workshop_Maize.sam
+title: Align GBS tags to reference genome

@@ -1,0 +1,3 @@
+jobid: 03_TagCountToFastq
+process: run_pipeline.pl -Xms512m -Xmx1g -configFile TagCountToFastq.xml
+title: Convert to Fastq

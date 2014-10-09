@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+ <TasselPipeline>
+    <fork1>
+        <SeqToTBTHDF5Plugin>
+            <i>../../01_RawSequence</i>
+            <k>../../50_KeyFiles/GBS_Workshop_Maize_key.txt</k>
+            <e>ApeKI</e>
+            <o>./GBS_Workshop_Maize.h5</o>
+            <s>100000000</s>
+            <L>GBS_Workshop_MaizeTBTHDF5_Log.txt</L>
+            <t>../../02_TagCounts/02_MergedTagCounts/GBS_Workshop_Maize.cnt</t>
+        </SeqToTBTHDF5Plugin>
+    </fork1>
+    <runfork1/>
+</TasselPipeline>

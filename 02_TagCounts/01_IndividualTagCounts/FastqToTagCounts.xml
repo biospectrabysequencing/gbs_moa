@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+ <TasselPipeline>
+    <fork1>
+        <FastqToTagCountPlugin>
+            <i>../../01_RawSequence</i>
+            <o>./</o>
+            <k>../../50_KeyFiles/GBS_Workshop_Maize_key.txt</k>
+            <e>ApeKI</e>
+            <s>3000000</s>
+            <c>1</c>
+        </FastqToTagCountPlugin>
+    </fork1>
+    <runfork1/>
+</TasselPipeline>

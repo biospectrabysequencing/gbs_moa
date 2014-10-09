@@ -1,0 +1,21 @@
+moa simple -t 'Match tags to samples'
+moa run
+ls -la
+pwd
+cd 01_IndividualTBT/
+ls -la
+cd 01_IndividualTBT/
+cd 01_IndividualTBT/
+moa status
+moa run
+ls -la
+cd 01_IndividualTBT/
+ls -la
+moa status
+more GBS_Workshop_Maize.h5
+ls -la
+cd 01_IndividualTBT/
+cd 01_IndividualTBT/
+ls -la
+cd -
+moa status

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+ <TasselPipeline>
+    <fork1>
+        <SAMConverterPlugin>
+            <i>../03_SAM/GBS_Workshop_Maize.sam</i>
+            <o>./GBS_Workshop_Maize.topm</o>
+        </SAMConverterPlugin>
+    </fork1>
+    <runfork1/>
+</TasselPipeline>

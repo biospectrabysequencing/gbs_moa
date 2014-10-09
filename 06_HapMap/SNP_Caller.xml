@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+ <TasselPipeline>
+    <fork1>
+        <TagsToSNPByAlignmentPlugin>
+            <i>../05_TBT/04_PivotMergedTaxaTBT/PivotTaxaTBTHDF5.h5</i>
+            <o>./GBS_Workshop_Maize_chr+.hmp.txt.gz</o>
+            <m>../04_TOPM/GBS_Workshop_Maize.topm</m>
+            <mnF>0.8</mnF>
+            <mnMAF>0.02</mnMAF>
+            <mnMAC>100000</mnMAC>
+            <!-- Had to remove these options 
+                 <sC>9</sC> 
+            <eC>10</eC> --> 
+        </TagsToSNPByAlignmentPlugin>
+    </fork1>
+    <runfork1/>
+</TasselPipeline>
