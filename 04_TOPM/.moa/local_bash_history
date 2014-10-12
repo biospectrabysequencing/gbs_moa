@@ -97,3 +97,7 @@ more GBS_Workshop_Maize..log
 ls -la
 cd 04_TOPM/
 ll
+cd 04_TOPM/
+ll
+moa run
+ll

@@ -1,0 +1,63 @@
+moa simple
+ll
+mkdir tt
+cd 01_RawSequence/
+ll
+vi download.pl
+ll
+vi download.pl
+chmod u+x download.pl
+ll
+./download.pl
+wget https://drive.google.com/uc?export=download&id=0B12q88iyljSKY2Q1Nzc2MDMtNGNjNy00NmM0LTlmMzYtYTFjMmU1ZmY3ZmRm
+wget https://drive.google.com/uc?export=download&id=0B12q88iyljSKY2Q1Nzc2MDMtNGNjNy00NmM0LTlmMzYtYTFjMmU1ZmY3ZmRm
+curl =O tt.pdf https://drive.google.com/uc?export=download&id=0B12q88iyljSKY2Q1Nzc2MDMtNGNjNy00NmM0LTlmMzYtYTFjMmU1ZmY3ZmRm
+curl =O tt.pdf https://drive.google.com/uc?export=download&id=0B12q88iyljSKY2Q1Nzc2MDMtNGNjNy00NmM0LTlmMzYtYTFjMmU1ZmY3ZmRm
+curl -O tt.pdf https://drive.google.com/uc?export=download&id=0B12q88iyljSKY2Q1Nzc2MDMtNGNjNy00NmM0LTlmMzYtYTFjMmU1ZmY3ZmRm
+curl -O tt.pdf https://drive.google.com/uc?export=download&id=0B12q88iyljSKY2Q1Nzc2MDMtNGNjNy00NmM0LTlmMzYtYTFjMmU1ZmY3ZmRm
+curl https://drive.google.com/uc?export=download&id=0B12q88iyljSKY2Q1Nzc2MDMtNGNjNy00NmM0LTlmMzYtYTFjMmU1ZmY3ZmRm
+curl https://drive.google.com/uc?export=download&id=0B12q88iyljSKY2Q1Nzc2MDMtNGNjNy00NmM0LTlmMzYtYTFjMmU1ZmY3ZmRm
+curl https://drive.google.com/uc?export=download&id=0B12q88iyljSKaGFUY1pNVEtoRWM
+curl https://drive.google.com/uc?export=download&id=0B12q88iyljSKaGFUY1pNVEtoRWM
+curl "https://drive.google.com/uc?export=download&id=0B12q88iyljSKaGFUY1pNVEtoRWM"
+curl "https://drive.google.com/uc?export=download&id=0B12q88iyljSKaGFUY1pNVEtoRWM&confirm=5Ue8"
+curl "https://drive.google.com/uc?export=download&id=0B12q88iyljSKaGFUY1pNVEtoRWM&confirm=5Ue8"
+curl "https://drive.google.com/uc?export=download&id=0B12q88iyljSKaGFUY1pNVEtoRWM&confirm=5Ue8"
+curl "https://drive.google.com/uc?export=download&id=0B12q88iyljSKaGFUY1pNVEtoRWM&confirm=5Ue8"
+curl "https://drive.google.com/uc?export=download&id=0B12q88iyljSKaGFUY1pNVEtoRWM&confirm=5Ue8"
+curl "https://drive.google.com/uc?export=download&id=0B12q88iyljSKaGFUY1pNVEtoRWM&confirm=5Ue8"
+curl "https://drive.google.com/uc?export=download&id=0B12q88iyljSKaGFUY1pNVEtoRWM&confirm=5Ue8"
+curl "https://drive.google.com/uc?export=download&id=0B12q88iyljSKaGFUY1pNVEtoRWM&confirm=5Ue8"
+curl "https://drive.google.com/uc?export=download&id=0B12q88iyljSKaGFUY1pNVEtoRWM&confirm=5Ue8"
+curl "https://drive.google.com/uc?export=download&id=0B12q88iyljSKaGFUY1pNVEtoRWM&confirm=5Ue8"
+curl "https://drive.google.com/uc?export=download&id=0B12q88iyljSKaGFUY1pNVEtoRWM&confirm=5Ue8"
+curl "https://drive.google.com/uc?export=download&id=0B12q88iyljSKaGFUY1pNVEtoRWM&confirm=5Ue8"
+curl "https://drive.google.com/uc?export=download&id=0B12q88iyljSKaGFUY1pNVEtoRWM&confirm=5Ue8"
+wget https://www.dropbox.com/s/0mlhtf7uxeqo25i/Foodworks-pilotstudy.fwb?dl=1
+ll
+rm Foodworks-pilotstudy.fwb\?dl\=1
+ll
+rm download.pl
+ll
+vi README.md
+vi README.md
+vi README.md
+moa simple
+moa set process
+ll
+cd 01_RawSequence/
+mv *.gz ~/
+ll
+cd 01_RawSequence/
+vi README.md
+moa set process
+vi README.md
+moa set process
+ll
+ll
+rm -rf tt/
+moa run
+ll
+rm C05F2ACXX_5_fastq.gz
+vi README.md
+ll

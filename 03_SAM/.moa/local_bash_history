@@ -72,3 +72,6 @@ moa show
 cd 03_SAM/
 ll
 moa show
+cd 03_SAM/
+ll
+moa run
