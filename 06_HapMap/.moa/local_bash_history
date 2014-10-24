@@ -69,3 +69,6 @@ ll
 moa run
 moa show
 run_pipeline.pl -Xms512m -Xmx1g -configFile ./SNP_Caller.xml
+cd 06_HapMap/
+ll
+moa run

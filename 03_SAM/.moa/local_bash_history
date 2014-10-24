@@ -75,3 +75,18 @@ moa show
 cd 03_SAM/
 ll
 moa run
+cd 03_SAM/
+ll
+moa show
+moa set process
+ll
+rm GBS_Workshop_Maize.
+rm GBS_Workshop_Maize.*
+ll
+moa run
+cd 03_SAM/
+ll
+moa run
+ll
+moa show
+ll

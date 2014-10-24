@@ -61,3 +61,14 @@ ll
 rm C05F2ACXX_5_fastq.gz
 vi README.md
 ll
+cd 01_RawSequence/
+moa set process
+moa run
+ll
+rm C05F2ACXX_5_fastq.gz
+ll
+cd 01_RawSequence/
+ll
+moa run
+ll
+ll
