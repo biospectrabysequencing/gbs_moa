@@ -117,3 +117,6 @@ git rm C05F2ACXX_5.cnt C08L7ACXX_6.cnt
 ll
 rm *.cnt
 ll
+cd 01_IndividualTagCounts/
+ll
+rm *.cnt

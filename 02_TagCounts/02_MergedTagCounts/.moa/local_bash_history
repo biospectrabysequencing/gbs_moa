@@ -29,3 +29,6 @@ moa show
 cd 02_MergedTagCounts/
 ll
 rm *.cnt
+cd 02_MergedTagCounts/
+ll
+rm *.cnt

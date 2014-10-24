@@ -27,3 +27,6 @@ cd 03_TagCountToFastq/
 ll
 ll -h
 mv *.fq ~/
+cd 03_TagCountToFastq/
+ll
+rm *.fq

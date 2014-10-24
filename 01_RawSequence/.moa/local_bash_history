@@ -72,3 +72,7 @@ ll
 moa run
 ll
 ll
+cd 01_RawSequence/
+ll
+moa show
+rm C05F2ACXX_5_fastq.gz
