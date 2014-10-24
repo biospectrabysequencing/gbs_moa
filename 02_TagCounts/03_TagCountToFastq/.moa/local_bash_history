@@ -30,3 +30,5 @@ mv *.fq ~/
 cd 03_TagCountToFastq/
 ll
 rm *.fq
+cd 03_TagCountToFastq/
+git rm -r --cache config last_run_id local_bash_history log log.d log.latest status

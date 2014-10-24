@@ -1,3 +1,0 @@
-jobid: 01_IndividualTagCounts
-process: run_pipeline.pl -Xms512m -Xmx1g -configFile FastqToTagCounts.xml
-title: Count GBS tags

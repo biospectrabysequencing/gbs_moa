@@ -32,3 +32,11 @@ rm *.cnt
 cd 02_MergedTagCounts/
 ll
 rm *.cnt
+cd 02_MergedTagCounts/
+git rm -r --cache config last_run_id local_bash_history log log.d log.latest status tmp
+git rm -r --cache config last_run_id local_bash_history log log.d log.latest status
+git rm -r --cache last_run_id local_bash_history log log.d log.latest status
+ll
+cd 02_MergedTagCounts/
+git rm -r --cache status
+git rm -r --cache local_bash_history log log.d log.latest status

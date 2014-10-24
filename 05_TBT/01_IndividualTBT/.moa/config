@@ -1,3 +1,0 @@
-jobid: 01_IndividualTBT
-process: run_pipeline.pl -Xms512m -Xmx1g -configFile SeqToTBTHDF5Plugin.xml
-title: Match tags to samples
