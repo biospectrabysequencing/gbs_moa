@@ -29,6 +29,20 @@ cd gbs_moa
 ./buildMoa.sh
 ```
 
+Sanity checking 
+---------------
+You should now be able to run any component of the workshop material (as long as it is in sequential order).
+For example;
+
+```
+## Traverse to first directory
+cd cd 02_TagCounts/01_IndividualTagCounts/
+## Check moa precommand/run/postcommands 
+moa status
+## Run moa component 
+moa run
+```
+
 Workshop videos
 ==============
 
