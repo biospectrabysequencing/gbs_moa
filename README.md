@@ -46,7 +46,9 @@ moa run
 Workshop videos
 ==============
 
-The GBS workshop in Palmerston North videos are available [online](https://www.youtube.com/watch?v=NGqKJ0TnL9o&list=PLCLuDSotcmhL2zP1_mUIhfw8vAWX-v1yT).
+The GBS workshop in Palmerston North videos are available on youtube;
+
+* [![online](http://img.youtube.com/vi/NGqKJ0TnL9o/0.jpg)](https://www.youtube.com/watch?v=NGqKJ0TnL9o&list=PLCLuDSotcmhL2zP1_mUIhfw8vAWX-v1yT)
 
 See also
 ========
