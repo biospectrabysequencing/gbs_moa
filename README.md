@@ -1,3 +1,16 @@
+Prerequisites
+=============
+
+* [moa](https://github.com/mfiers/Moa)
+* perl YAML::XS module 
+
+Version 0.52 of `YAML::XS` works;
+
+```
+perl -MYAML::XS -le 'print $YAML::XS::VERSION'
+0.52
+```
+
 Introduction
 ============
 
@@ -42,6 +55,7 @@ moa status
 ## Run moa component 
 moa run
 ```
+
 
 Workshop videos
 ==============
