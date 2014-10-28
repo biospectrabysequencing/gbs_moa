@@ -4,7 +4,7 @@ Example data for this project (Maize genome index)
 
 ## Obtaining data
  
-* Run the command "moa run"
+* Run the command `moa run`
 * This will download two files from DropBox
   * GBS_Workshop_Maize.2.bt2
   * GBS_Workshop_Maize.3.bt2
