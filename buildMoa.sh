@@ -5,15 +5,16 @@
 ## via  `moa new f [template]` 
 
 
-moaDirs=$(find . -name .moa -type d | grep [[:digit:]] | xargs -I {} dirname {})
+moaDirs=$(find . -name .moa -type d | grep [[:digit:]] | xargs -I {} dirname {} | sort)
 
 for i in $moaDirs
 do
   cd $i
   ## fetch moa template under .moa/config
+  echo [ $i ]
   template=$(perl -MYAML=LoadFile -MData::Dumper -le '$f = LoadFile ".moa/config"; print $f->{"template"}')
   moa new -f $template
-  cd -
+  cd - 2>/dev/null
 done
 
 
