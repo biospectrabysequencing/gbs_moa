@@ -2,25 +2,36 @@ Prerequisites
 =============
 
 * [moa](https://github.com/mfiers/Moa)
-* perl YAML::XS module 
+* perl YAML::XS module
+
+Perl `YAML::XS` is required to correctly parse YAML .moa/config files which can be slightly malformed by `moa`
 
 Version 0.52 of `YAML::XS` works;
 
 ```
+## Installing using cpan
+$ cpan
+get YAML::XS
+make YAML::XS
+install YAML::XS
+quit
+
+## Sanity check
 perl -MYAML::XS -le 'print $YAML::XS::VERSION'
 0.52
 ```
 
+
 Introduction
 ============
 
-The GBS workshop in Palmerston North on 20 February 2014 used an example workflow which has been moa-fied.
+The GBS workshop in Palmerston North on 20 February 2014 used an example workflow which has been `moa-fied`.
 
 PDFs of the workshop slides are available at;
 
 > http://www.genotypingbysequencing.org/GBS_Workshop_Feb_2014/
 
-The workshop pdf is also available at;
+The pdf for the exercise is also available at;
 
 > http://ciedeakin.files.wordpress.com/2013/12/hands_on_exercise_20140219rje.pdf 
 
