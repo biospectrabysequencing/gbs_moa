@@ -1,0 +1,3 @@
+jobid: 05_TBT
+process: run_pipeline.pl -Xms512m -Xmx1g -configFile SAMConverter.xml
+title: Convert sam tags to tags on physical map (TOPM)
