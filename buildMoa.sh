@@ -12,7 +12,7 @@ do
   cd $i
   ## fetch moa template under .moa/config
   echo [ $i ]
-  template=$(perl -MYAML=LoadFile -MData::Dumper -le '$f = LoadFile ".moa/config"; print $f->{"template"}')
+  template=$(perl -MYAML=LoadFile -le '$f = LoadFile ".moa/config"; print $f->{"template"}')
   moa new -f $template
   cd - 2>/dev/null
 done
