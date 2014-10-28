@@ -1,0 +1,4 @@
+jobid: 06_HapMap
+process: run_pipeline.pl -Xms512m -Xmx1g -configFile ./SNP_Caller.xml
+title: Call SNPs
+template: simple
