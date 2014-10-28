@@ -2,7 +2,7 @@ Prerequisites
 =============
 
 * [moa](https://github.com/mfiers/Moa)
-* perl YAML::XS module
+* perl [YAML::XS](http://search.cpan.org/dist/YAML-LibYAML/lib/YAML/XS.pod) module
 
 Perl `YAML::XS` is required to correctly parse YAML .moa/config files which can be slightly malformed by `moa`
 
