@@ -1,0 +1,7 @@
+class: core
+enabled: true
+installed: '2014-10-31T14:03:54.395098'
+name: gbs_sam
+priority: 100
+provider: core
+provider_type: core
