@@ -1,0 +1,7 @@
+class: core
+enabled: true
+installed: '2014-10-31T14:35:35.425077'
+name: gbs_topm
+priority: 100
+provider: core
+provider_type: core

@@ -1,0 +1,29 @@
+### run
+
+set -v
+
+# Convert sam tags to tags on physical map (TOPM)
+# Input: XML config file. Either configured or standard file. Standard must be in current directory
+
+{% if config  %}
+
+run_pipeline.pl -Xms512m -Xmx1g {{ opt }} -configFile {{ config }}
+
+{% else  %}
+
+run_pipeline.pl -Xms512m -Xmx1g {{ opt }} -configFile SAMConverter.xml
+
+{% endif %}
+
+### clean
+
+{% if project %}
+
+rm -rf {{ project }}.*
+
+{% else %}
+
+rm -rf GBS_Workshop_Maize.*
+
+{% endif  %}
+
