@@ -1,0 +1,7 @@
+class: core
+enabled: true
+installed: '2014-10-29T16:31:06.746564'
+name: gbs_tagcount
+priority: 100
+provider: core
+provider_type: core
