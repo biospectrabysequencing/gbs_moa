@@ -9,7 +9,11 @@ output:
     toc: yes
 ---
 
-******
+
+### How to edit this document
+
+The master version of this document is on *[github](https://github.com/biospectrabysequencing/gbs_moa)*. This printing is version *[`r system("git rev-parse --short HEAD", intern=TRUE)`](https://github.com/biospectrabysequencing/gbs_moa/commit/`r system("git rev-parse --short HEAD", intern=TRUE)`)* from that repository, last modifed *`r format(Sys.time(), "%d %b %Y")`*
+
 
 <!-- ---------------------- Page 2------------------------ -->
 WARNING: SMART CHOICES vs DEFAULTS vs TUTORIAL SETTINGS
