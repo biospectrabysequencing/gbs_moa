@@ -13,8 +13,6 @@ tmp/
 *.zip
 *.gz
 *.h5
-*.docx
-*.html
 
 
 moa/
