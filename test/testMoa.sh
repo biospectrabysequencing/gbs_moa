@@ -3,7 +3,7 @@
 mkdir -p /tmp/$USER/.moa
 
 ## Making .moa/config yaml markup
-cat - > /tmp/$USER/.moa/config <<EOF
+cat - > /tmp/$USER/.moa/config << 'EOF'
 jobid: 00_Test
 process: find . -name config -print
 title: Find location of config file
@@ -16,4 +16,3 @@ cd /tmp/$USER
 moa new -f simple
 moa run
 
-EOF
