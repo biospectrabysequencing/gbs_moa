@@ -17,7 +17,7 @@
 }
 
 .jumbotron {
-  background-image:url('dna.jpg');
+  background-image:url('/img/dna.jpg');
   height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
