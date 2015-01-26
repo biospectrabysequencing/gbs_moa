@@ -1,0 +1,55 @@
+---
+meeting: BBS group meeting
+location: Scopia
+date: 22/01/2015
+present: Rudi, Ruy, Roger, Rob, Shane, Louis, Mingshu, Helge, Patrick, Charles, Alan, Marcus, Aurelie
+---
+
+
+
+### EResearch ( Queenstown 23-25 March )
+
+Tony Lough has asked Rob to organise a workshop on BBS during the EResearch conference.
+Rob has sent the abstract around so we can have a look and add things if we wish to.
+NZGL would provide funding for three people from the group to attend and present at this workshop and Rob (MBIE) would pay for three `AgResearch` people. 
+Mingshu is happy to be an author but not a presenter.
+Patrick is going anyway, Charles or Marcus from `Plant & Food` could go. Roy or Marcus could go to talk about `moa`.
+Zane from Plant and food could also be invited and talk about the integration of Kea with the BBS pipeline. 
+Rob is going to organise for three persons from `AgResearch` to go. 
+Helge : What about the github training we talked in the previous [meeting](https://github.com/mdavy86/gbs_moa/blob/f/minutes/minutes/20141216.md) and also potential of shiny applications? 
+
+Helge is to make a plan… 
+
+### QC 
+Rob: Katie is happy and interested to help. She’ll join the group later on.
+Ruy to get the final notes on the dataset they worked on with Rebecca .They had agreed on 3 different thresholds , Quality control checks pre Tassel pipeline. 
+
+Others thing to look at are;
+
+* Kmers/sample
+* read number per sample
+* are negative controls blank? 
+
+Katie in Cromwell is looking for contamination – code not available for the moment.
+Louis : There are a few reference database on the NZGL machine to use [Fastq_screen](http://www.bioinformatics.babraham.ac.uk/projects/fastq_screen/) for a quick check. Louis will make the documentation available so everybody can use this if wanted. 
+Alan : blast is slower but more comprehensive  (organelles, symbiots…) .
+Ruy : What about positive control in each run ( something we know )
+Marcus provided a link to github where [QC discussion](https://github.com/biospectrabysequencing/gbs_moa/issues/16) should be happening 
+Rob  : QC should also happen after the pipeline, form the results .
+
+Post tassel investigation include;
+
+* Alignment validation
+* genome browser visualization ensembl/gViz
+* Fragment size distribution
+* Comparison between sample and known population of tag sites
+* Mismatches in alignment CIGAR strings
+* Variant calling validation
+
+Ruy and Charles : So what about the test datasets, we need a test suite, about 6 different cases to test.
+Rob : then the data confidentiality might be an issue if we want to share the testing dataset  
+AP for Rob: data sharing issue.
+The last option would be to dig into NCBI repositories but not preferred .
+Rob : licencing : how to we make the source code available ? Most likely GPL3.  Is was discussed how to do it : have an agreement that when people contribute to the code, they agree that it will be then available under …. Licence. We don’t want to make the code freely available and then people would use it and sell a product ( Illumina and Geneious ? ) but we want as much people  as possible to use this code (put an author list file with the code files).
+AgResearch  will manage this through the output release form. Helge will see how it works for `Plant & food`, Shane for `NZGL`.
+Patrick will liaise with Mingshu and Ruy about the QC and [github](https://github.com/biospectrabysequencing/gbs_moa) seems to be the place to share info.
