@@ -28,6 +28,7 @@ Others thing to look at are;
 
 * Kmers/sample
 * read number per sample
+* Visualization as 96 well plate &rarr; heatmaps etc
 * are negative controls blank? 
 
 Katie in Cromwell is looking for contamination – code not available for the moment.
