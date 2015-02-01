@@ -1,0 +1,28 @@
+author: Helge Dzierzon 
+backend: ruff
+commands:
+  run:
+    help: ''
+    mode: simple
+creation_date: October 29 2014
+description: Execute GBS Count Tags / GBS Tassel pipeline.
+parameters:
+  config_fastq_to_tag_counts:
+    category: input
+    help: 'XML config file for 01_IndividualTagCounts'
+    optional: true
+    type: string
+  config_merged_to_tag_counts:
+    category: input
+    help: 'XML config file for 02_MergedTagCounts'
+    optional: true
+    source: input
+    type: string
+  config_tag_counts_to_fastq:
+    category: input
+    help: 'XML config file for 03_TagCountToFastq'
+    optional: true
+    type: string
+moa_id: gbs_tagcount 
+name: gbs_tagcount
+title: Execute GBS Count Tags / GBS Tassel pipeline

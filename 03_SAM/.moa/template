@@ -1,0 +1,27 @@
+author: Helge Dzierzon
+backend: ruff
+commands:
+  run:
+    help: ''
+    mode: simple
+creation_date: October 29 2014
+description: Align GBS tags to reference genome
+moa_id: gbs_sam
+name: gbs_sam
+parameters:
+  cores:
+    category: input
+    help: Number of cores (-p)
+    optional: false
+    type: string
+  opt:
+    category: input
+    help: Additional options for bowtie2
+    optional: true
+    type: string
+  project:
+    category: input
+    help: Name of the project
+    optional: true
+    type: string
+title: Align GBS tags to reference genome

@@ -1,0 +1,47 @@
+### run
+
+set -v
+
+# test if file exists
+
+
+# Run Individual tag counts. 
+# Input: XML config file. Either configured or standard file. Standard must be in current directory
+
+{% if config_fastq_to_tag_counts %}
+    run_pipeline.pl -Xms512m -Xmx1g -configFile {{ config_fastq_to_tag_counts }}
+{% else %}
+    mkdir -p 01_IndividualTagCounts
+    run_pipeline.pl -Xms512m -Xmx1g -configFile 01_IndividualTagCounts.xml
+{% endif %}
+
+# Merge tag counts.
+# Input: XML config file. Either configured or standard file. Standard must be in current directory
+
+{% if config_merged_to_tag_counts %}
+    run_pipeline.pl -Xms512m -Xmx1g -configFile {{ config_merged_to_tag_counts  }}
+{% else %}
+    mkdir -p 02_MergedTagCounts
+    run_pipeline.pl -Xms512m -Xmx1g -configFile 02_MergedTagCounts.xml
+{% endif %}
+
+# Generate fastq from counts.
+# Input: XML config file. Either configured or standard file. Standard must be in current directory
+
+{% if config_tag_counts_to_fastq %}
+    run_pipeline.pl -Xms512m -Xmx1g -configFile {{ config_tag_counts_to_fastq  }}
+{% else %}
+    mkdir -p 03_TagCountToFastq
+    run_pipeline.pl -Xms512m -Xmx1g -configFile 03_TagCountToFastq.xml 
+{% endif %}
+
+### unittest noexpand
+
+moa map -t test -f --np
+for x in `seq -w 1 20`; do
+   touch test.${x}.in
+done
+moa set process='cp {{input}} {{output}}'
+moa set input='test.*.in'
+moa set output='test.*.out'
+moa run

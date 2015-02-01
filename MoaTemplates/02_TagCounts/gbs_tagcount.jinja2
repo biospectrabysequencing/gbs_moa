@@ -1,0 +1,30 @@
+### run
+
+set -v
+
+# test if file exists
+
+
+# Run Individual tag counts. 
+# Input: XML config file. Either configured or standard file. Standard must be in current directory
+
+Rscript -e "library(knitr); knit('.moa/template.d/gbs_tagcount.Rmd')"
+
+### clean
+
+rm -rf 01_IndividualTagCounts 
+rm -rf 02_MergedTagCounts
+rm -rf 03_TagCountToFastq
+rm -rf gbs_tagcount.html
+rm -rf gbs_tagcount.md
+
+### unittest noexpand
+
+moa map -t test -f --np
+for x in `seq -w 1 20`; do
+   touch test.${x}.in
+done
+moa set process='cp {{input}} {{output}}'
+moa set input='test.*.in'
+moa set output='test.*.out'
+moa run

@@ -1,0 +1,40 @@
+Run Individual tag counts.
+
+------------------------------------------------------------------
+
+```{r}
+
+opts_knit$set(root.dir='./');
+
+```
+
+
+# Run Individual tag counts
+Input: XML config file. Either configured or standard file. Standard must be in current directory
+
+```{r FastqToTagCounts, engine='bash'}
+
+mkdir -p 01_IndividualTagCounts
+run_pipeline.pl -Xms512m -Xmx1g -configFile 01_IndividualTagCounts.xml
+
+```
+
+# Merge tag counts.
+Input: XML config file. Either configured or standard file. Standard must be in current directory
+
+```{r MergedToTagCounts, engine='bash'}
+
+mkdir -p 02_MergedTagCounts
+run_pipeline.pl -Xms512m -Xmx1g -configFile 02_MergedTagCounts.xml
+
+```
+
+# Generate fastq from counts.
+Input: XML config file. Either configured or standard file. Standard must be in current directory
+
+```{r FastqTagCountsToFastq, engine='bash'}
+
+mkdir -p 03_TagCountToFastq
+run_pipeline.pl -Xms512m -Xmx1g -configFile 03_TagCountToFastq.xml
+
+```

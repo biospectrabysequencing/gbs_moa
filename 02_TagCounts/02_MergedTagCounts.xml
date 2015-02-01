@@ -2,8 +2,8 @@
  <TasselPipeline>
     <fork1>
         <MergeMultipleTagCountPlugin>
-            <i>../01_IndividualTagCounts</i>
-            <o>./GBS_Workshop_Maize.cnt</o>
+            <i>./01_IndividualTagCounts</i>
+            <o>./02_MergedTagCounts/GBS_Workshop_Maize.cnt</o>
             <c>5</c>
         </MergeMultipleTagCountPlugin>
     </fork1>

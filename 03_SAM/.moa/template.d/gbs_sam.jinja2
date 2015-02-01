@@ -1,0 +1,38 @@
+### run
+
+set -v
+
+# Align GBS tags to reference genome.
+# Input: 
+#  - project name / project
+#  - number of cores / cores
+#  - additional bowtie2 options / opt
+#  - genome fasta file from 02_TagCounts/03_TagCountToFastq
+#  - 00_AlignerIndices
+
+
+{% if project %}
+
+bowtie2 -p {{ cores }} {{ opt }} -x ../00_AlignerIndices/{{ project }} -U ../02_TagCounts/03_TagCountToFastq/{{ project }}.fq -S {{ project }}.sam
+samtools view -bT ../02_TagCounts/03_TagCountToFastq/{{ project }}.fq {{ project }}.sam |  samtools sort - {{ project }}
+
+{% else %}
+
+bowtie2 -p 15 --very-sensitive-local -x ../00_AlignerIndices/GBS_Workshop_Maize -U ../02_TagCounts/03_TagCountToFastq/GBS_Workshop_Maize.fq -S GBS_Workshop_Maize.sam
+samtools view -bT ../02_TagCounts/03_TagCountToFastq/GBS_Workshop_Maize.fq GBS_Workshop_Maize.sam |  samtools sort - GBS_Workshop_Maize
+
+{% endif %}
+
+
+### clean
+
+{% if project %}
+
+rm -rf {{ project }}.*
+
+{% else %}
+
+rm -rf GBS_Workshop_Maize.*
+
+{% endif  %}
+
