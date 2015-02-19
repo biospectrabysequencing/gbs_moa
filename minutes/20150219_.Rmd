@@ -26,7 +26,7 @@ We have two hours, seven speakers, just 15 minutes per speaker plus 1-2 minutes 
 
 ## Abstract
 
-We need to all add our contributions to the fourth paragraph of the abstract brief biography, and send it to Rob. For example there is currently nothing about `Kea` for sample tracking
+We need to all add our contributions to the fourth paragraph of the [abstract](https://github.com/biospectrabysequencing/gbs_moa/blob/master/minutes/eResearch_abstract.Rmd) brief biography, and send it to Rob. For example there is currently nothing about `Kea` for sample tracking
 
 ## Talks (complete the list)
 * Reproducible research using Moa (knitr? github) - Roy
