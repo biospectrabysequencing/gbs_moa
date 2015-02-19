@@ -30,6 +30,7 @@ Others thing to look at are;
 
 * Kmers/sample
 * read number per sample
+* Visualization as 96 well plate &rarr; heatmaps etc
 * are negative controls blank? 
 
 Katie in Cromwell is looking for contamination – code not available for the moment.
@@ -52,6 +53,6 @@ Ruy and Charles : So what about the test datasets, we need a test suite, about 6
 Rob : then the data confidentiality might be an issue if we want to share the testing dataset  
 AP for Rob: data sharing issue.
 The last option would be to dig into NCBI repositories but not preferred .
-Rob : licencing : how to we make the source code available ? Most likely GPL3.  Is was discussed how to do it : have an agreement that when people contribute to the code, they agree that it will be then available under …. Licence. We don’t want to make the code freely available and then people would use it and sell a product ( Illumina and Geneious ? ) but we want as much people  as possible to use this code (put an author list file with the code files).
+Rob : licencing : how to we make the source code available ? Most likely GPL3.  Is was discussed how to do it : have an agreement that when people contribute to the code, they agree that it will be then available under …. Licence. We don’t want to make the code freely available and then people would use it and sell a product ( Illumina and Geneious ? ) and not contribute improvements back. But we want as many people  as possible to use this code (put an author list file with the code files).
 AgResearch  will manage this through the output release form. Helge will see how it works for `Plant & food`, Shane for `NZGL`.
 Patrick will liaise with Mingshu and Ruy about the QC and [github](https://github.com/biospectrabysequencing/gbs_moa) seems to be the place to share info.
