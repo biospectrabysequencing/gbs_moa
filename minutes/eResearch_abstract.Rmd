@@ -1,0 +1,25 @@
+---
+title: "eResearch abstract"
+date: "Thursday, February 19, 2015"
+output: word_document
+---
+
+Biospectra-by-Sequencing Genetic Analysis Platform Workshop
+===========================================================
+
+
+Rob Elshire1, Patrick Biggs^2^, Mingshu Cao^1^, Roger Moraga^1^, Roy Storey^3^
+1 AgResearch Limited, 2 Massey University, 3 Plant and Food Research 
+Rob.Elshire@AgResearch.co.nz, P.Biggs@massey.ac.nz, Mingshu.Cao@AgResearch.co.nz, Roger.Moraga@AgResearch.co.nz, Roy.Storey@PlantandFood.co.nz
+
+
+ABSTRACT / INTRODUCTION 
+-----------------------
+
+The Biospectra-by-Sequencing  (BBS) project is a New Zealand multi-institutional collaborative effort to build a robust genetic analysis platform initially focused on the open-source Genotyping-by-Sequencing (GBS) technology that enables more cost-effective capture of DNA-based information and to promote its adoption by a diverse range of end-users for the benefit of New Zealand’s biological economy. It is an offshoot of the MBIE and Dairy NZ funded Genomics for Production and Security in a Biological Economy project at AgResearch. 
+
+Although plummeting costs of DNA sequencing present a myriad of opportunities, most remain unrealized because of lags in the development and implementation of appropriate analysis pipelines. As a means to redress this imbalance, we are developing a set of analytical platforms and industry-focused extensions built around a GBS, demonstrate their applicability to a range of biological systems through proof of concept work, and promote adoption of these platforms through structured engagement with end users, leveraging existing industry co-funded research and development initiatives throughout the biological economy.
+
+The BBS project brings together many key stake holders (AgResearch, Plant and Food, New Zealand Genomics Limited and Scion) to develop a robust data processing / analysis platform that will be publicly available and the best of breed to support the molecular work. The key attributes of the platform are: automation, quality control, auditability, replicability and efficiency. It is being developed in close communication with the end user community.
+
+At this workshop, participants will learn about: 1) Molecular basis of GBS, 2) Applications for GBS 3) Analysis platform components, 4) Automation and Logging using Moa, 5) Quality control and assurance steps and6) Development tools. The authors will also describe genome assembly methods aimed towards GBS support, community resources to inform researchers and ways to interact with the project. 
