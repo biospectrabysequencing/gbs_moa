@@ -1,0 +1,36 @@
+---
+date: "19/02/2015"
+location: Scopia
+meeting: BBS group meeting
+output: html_document
+present: Roger, Marcus, Patrick, , Ray?, Anthony (NZGL)
+---
+
+
+
+### EResearch ( Queenstown 23-25 March )
+
+Tony Lough has asked Rob to organise a workshop on BBS during the EResearch conference. Rob has sent the latest abstract by email.
+
+NZGL are  providing funding for three people from the group to attend and present at this workshop and Rob (MBIE) would pay for three `AgResearch` people.
+
+Rob: Define scope of the workshop, some high level thinking around topics, focus for participants.
+
+* Cross institute collaboration
+* Development tools for the research community
+* Open source software
+
+Robs Previous [abstract](http://ernz2014.eresearch.org.nz/conference/eresearch-nz-2014/schedule/enabling-very-complex-experiments-genomics-for-production)/[talk](http://ernz2014.eresearch.org.nz/sites/default/files/ernz2014-enabling-very-complex-experiments.pdf) at [eResearch 2014](http://ernz2014.eresearch.org.nz/conference/eresearch-nz-2014).
+
+We have two hours, seven speakers, just 15 minutes per speaker plus 1-2 minutes of questions. Infrastructure required is firefox/chrome webbrowser for html/pdf based presentations, and microsoft word.
+
+## Abstract
+
+We need to all add our contributions to the fourth paragraph of the abstract brief biography, and send it to Rob. For example there is currently nothing about `Kea` for sample tracking
+
+## Talks (complete the list)
+* Reproducible research using Moa (knitr? github) - Roy
+* Random tag Genotype by Sequencing - Marcus
+* Kea for sample tracking - Zane 
+* Quality control
+* ...
