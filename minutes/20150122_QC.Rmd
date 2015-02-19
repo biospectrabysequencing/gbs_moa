@@ -1,8 +1,10 @@
 ---
-meeting: BBS group meeting
+date: "22/01/2015"
 location: Scopia
-date: 22/01/2015
-present: Rudi, Ruy, Roger, Rob, Shane, Louis, Mingshu, Helge, Patrick, Charles, Alan, Marcus, Aurelie
+meeting: BBS group meeting
+output: word_document
+present: Rudi, Ruy, Roger, Rob, Shane, Louis, Mingshu, Helge, Patrick, Charles, Alan,
+  Marcus, Aurelie
 ---
 
 
