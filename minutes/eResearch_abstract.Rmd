@@ -1,7 +1,7 @@
 ---
 title: "eResearch abstract"
+output: html_document
 date: "Thursday, February 19, 2015"
-output: word_document
 ---
 
 Biospectra-by-Sequencing Genetic Analysis Platform Workshop
@@ -22,4 +22,15 @@ Although plummeting costs of DNA sequencing present a myriad of opportunities, m
 
 The BBS project brings together many key stake holders (AgResearch, Plant and Food, New Zealand Genomics Limited and Scion) to develop a robust data processing / analysis platform that will be publicly available and the best of breed to support the molecular work. The key attributes of the platform are: automation, quality control, auditability, replicability and efficiency. It is being developed in close communication with the end user community.
 
-At this workshop, participants will learn about: 1) Molecular basis of GBS, 2) Applications for GBS 3) Analysis platform components, 4) Automation and Logging using Moa, 5) Quality control and assurance steps and6) Development tools. The authors will also describe genome assembly methods aimed towards GBS support, community resources to inform researchers and ways to interact with the project. 
+At this workshop, the following topics will be discussed 
+
+<span style="color:red">List needs modification</span>
+
+1. Molecular basis of GBS
+2. Applications for GBS 
+3. Analysis platform components
+4. Automation and Logging using Moa
+5. Quality control and assurance steps
+6. Development tools
+
+The authors will also describe genome assembly methods aimed towards GBS support, community resources to inform researchers and ways to interact with the project. 
