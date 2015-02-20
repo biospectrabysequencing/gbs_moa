@@ -31,7 +31,7 @@ quality control of NGS data, RNASeq analysis, and new NGS techniques such as Par
 
 ### Roy Storey
 
-Roy Storey is a Bioinformatician at Plant and Food Research, with experience authoring and running automated workflows as a natural complement of reproducible research.
+Roy Storey is a Bioinformatician at Plant and Food Research with experience authoring and running automated workflows as a natural complement of reproducible research.
 
 
  
