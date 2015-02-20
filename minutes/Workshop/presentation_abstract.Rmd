@@ -18,8 +18,7 @@ github for collaboration and software deployment in the Biospectra By Sequencing
 ### Random Tag Genotype by Sequencing (Marcus Davy)
 
 
-Random Tag GBS is a protocol that has been developed in Plant and Food research as a potential 
-alternative to the standard GBS protocol whcih offers considerable less size selection bias of Restriction site fragment sizes. This talk will discuss an experiment comparing rtGBS to stGBS in 96 samples from six kiwifruit genotypes
+Plant and Food research has developed Random Tag GBS (rtGBS) as an alternative protocol which offers considerably less restriction fragment size selection bias than the standard GBS protocol. Marcus Davy will talk about an experiment in kiwifruit designed to compare the two protocols
 
 
 Blurbs
