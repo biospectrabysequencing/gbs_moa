@@ -10,13 +10,10 @@ Talks
 
 ### Reproducible research in Biospectra by Sequencing (Roy Storey)
 
-
-Moa is a bioinformatics tool for Reproducible research. We are using Moa in conjunction with
-github for collaboration and software deployment in the Biospectra By Sequencing collaboration.
-
+The BBS project is developing an analysis engine collaboratively on github using Moa for 
+reproducibility and automation. Roy Storey will give an overview of our use of Moa and github.
 
 ### Random Tag Genotype by Sequencing (Marcus Davy)
-
 
 Random Tag GBS is a protocol that has been developed in Plant and Food research as a potential 
 alternative to the standard GBS protocol whcih offers considerable less size selection bias of Restriction site fragment sizes. This talk will discuss an experiment comparing rtGBS to stGBS in 96 samples from six kiwifruit genotypes
@@ -29,12 +26,12 @@ Blurbs
 ### Marcus Davy
 
 
-Marcus Davy is a Bioinformatician at Plant and Food research, with interests in Reproducible research,
+Marcus Davy is a Bioinformatician at Plant and Food Research, with interests in Reproducible research,
 quality control of NGS data, RNASeq analysis, and new NGS techniques such as Parallel sequencing of barcoded BACs, and random tag GBS sequencing.
 
 ### Roy Storey
 
-Row Storey is a Bioinformatician at Plant and Food research...
+Roy Storey is a Bioinformatician at Plant and Food Research, with experience authoring and running automated workflows as a natural complement of reproducible research.
 
 
  
