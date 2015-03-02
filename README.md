@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/biospectrabysequencing/gbs_moa.png?label=ready&title=Ready)](https://waffle.io/biospectrabysequencing/gbs_moa)
 Prerequisites
 =============
 
