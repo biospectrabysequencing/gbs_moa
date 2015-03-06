@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/kiwiroy/gbs_moa.svg?style=plastic)](https://travis-ci.org/kiwiroy/gbs_moa)
+[![Build Status](https://travis-ci.org/kiwiroy/gbs_moa.svg)](https://travis-ci.org/kiwiroy/gbs_moa)
 [![Stories in Ready](https://badge.waffle.io/biospectrabysequencing/gbs_moa.png?label=ready&title=Ready)](https://waffle.io/biospectrabysequencing/gbs_moa)
 
 Prerequisites
