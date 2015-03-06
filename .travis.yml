@@ -1,9 +1,7 @@
 branches:
   only:
     - f/travis-test
-language: 
-  - python
-  - perl
+language: perl
 python:
   - "2.7"
 perl:
