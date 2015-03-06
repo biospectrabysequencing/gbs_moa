@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/bin/bash
 
 ## Traverse to each moa directory and reconstruct moa instance
 ## The moa constuctor also fetches the remplate required from an additional yaml field
