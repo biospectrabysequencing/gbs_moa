@@ -4,8 +4,12 @@ branches:
 language: python
 python:
   - "2.7"
+env:
+  global:
+    - CPAN_OPTS="-I"
 before_install: 
-  - cpan install YAML::XS
+  - perl --version
+  - cpan YAML::XS
 script: 
   - ./test/testMoa.sh
   - ./buildMoa.sh
