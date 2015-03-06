@@ -9,7 +9,8 @@ env:
     - CPAN_OPTS="-I"
 before_install: 
   - perl --version
-  - perl -MCPAN -e 'CPAN->mkmyconfig'
+  - mkdir ~/.cpan/CPAN
+  - cpan -J > ~/.cpan/CPAN/Config.pm
   - cpan YAML::XS
 script: 
   - ./test/testMoa.sh
