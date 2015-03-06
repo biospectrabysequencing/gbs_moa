@@ -7,6 +7,8 @@
 
 moaDirs=$(find . -name .moa -type d | grep [[:digit:]] | xargs -I {} dirname {} | sort)
 
+set -xe
+
 for i in $moaDirs
 do
   cd $i
@@ -18,5 +20,5 @@ do
 done
 
 
-exit;
+exit 0;
 
