@@ -7,10 +7,9 @@ python:
 env:
   global:
     - CPAN_OPTS="-I"
+    - PERL_MM_USE_DEFAULT=1
 before_install: 
   - perl --version
-  - mkdir ~/.cpan/CPAN
-  - cpan -J > ~/.cpan/CPAN/Config.pm
   - cpan YAML::XS
 script: 
   - ./test/testMoa.sh
