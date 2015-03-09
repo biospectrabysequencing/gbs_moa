@@ -1,0 +1,19 @@
+language: python
+python:
+  - "2.7"
+#branches:
+#  only:
+#    - f/travis-test
+env:
+  global:
+    - CPAN_OPTS="-I"
+    - PERL_MM_USE_DEFAULT=1
+    - PERL_MB_OPT="--install_base \"/home/travis/perl5\""
+    - PERL_MM_OPT="INSTALL_BASE=/home/travis/perl5"
+    - PERL5LIB=/home/travis/perl5/lib/perl5
+before_install: 
+  - perl --version
+  - cpan YAML::XS
+script: 
+  - ./test/testMoa.sh
+  - ./buildMoa.sh

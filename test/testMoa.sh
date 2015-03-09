@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/bin/bash
 
 mkdir -p /tmp/$USER/.moa
 
