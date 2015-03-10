@@ -1,0 +1,46 @@
+---
+title: "Moa discussion"
+date: "Friday, March 3, 2015"
+output: word_document
+present:  Marcus, Mingshu, Rob, Roy
+---
+
+
+The main reason Mingshu called the meeting is that in the current state, what has been written is not flexible 
+and requires a lot of manual changes to run on real data. The reason this is the case is that it was written to 
+run the example from the workshop and just that. I misunderstood the purpose of Moa, partially because of the 
+early discussion we had around Moa vs. Make. At this point, I see that those tools each are designed to do different jobs. 
+
+In fact, during my home install, I found that Moa can use Make... See further my install notes (incomplete at the moment) 
+[here](http://www.biospectrabysequencing.org/tiki/tiki-index.php?page=Setting+Up+Moa+Coding+Environment+in+Debian)
+
+Our goal is to get to the point where we have one configuration file to set the variables (global and local) that will 
+be used to run the pipeline. Scripts will be written that parse the config file and interact with Moa running the pipeline. 
+As a side note: I've noticed that Moa has a dependency on [Ruffus](http://www.ruffus.org.uk/tutorials/new_tutorial/introduction.html) 
+which seems to perform the job that Make would otherwise do. Do we plan to use Ruffus?
+
+I mentioned that it would be nice to have a text based configuration tool (similar to the one used to compile the Linux kernel) 
+to guide a user through the process of setting things up for a particular environment and job. Marcus mentioned 
+[yaml](https://en.wikipedia.org/wiki/YAML) as a format for the configuration file, citing the human readable characteristics of yaml.
+
+Roy mentioned the potential to use [ensembl hive](https://github.com/Ensembl/ensembl-hive) to run the pipeline. 
+
+In order to progress further, we need to define the initial three scenarios for processing GBS data under TASSEL3:
+1 Reference based with hapmap output
+2 Reference based with vcf output
+3 Reference free (UNEAK pipeline) with hapmap output.
+
+Rob will generate uml diagrams for these three scenarios. For each task in the process he will highlight global and local variables 
+to aid in constructing the config file. Marcus and Roy will use that information to make the next steps.
+
+Once we have the basics of the above three scenarios coded, we will incorporate QC and sanity checking into the work. 
+In the meantime, a new directory under the BBS repository will be created and small scripts / code snippets that 
+we already have will be put there for future use in the QC and sanity checking.
+
+There was discussion of setting up a [sandpit](https://github.com/PlantandFoodResearch/sandpit) for new users of github to learn how to use it without munging the rest of the project.
+
+Several sample data sets need to be identified and downloaded to be used in testing the work. I can think of several 
+maize papers that have uploaded sequence and key file information to NCBI. Rob Will follow up on that. Cecelia and Roger 
+have both looked into this topic and we should follow up with them on what they have found.
+
+The general consensus is that we will not reach workable code before the eResearch conference, but will get things underway now.
