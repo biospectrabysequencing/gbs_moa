@@ -83,3 +83,5 @@ See also
 
 * https://github.com/mfiers/Moa
 * [moa documentation](http://moa.readthedocs.org/en/latest/)
+* [biospectrabysequencing tiki wiki](http://www.biospectrabysequencing.org/tiki/tiki-index.php)
+* [Robs Notes installing Moa](http://www.biospectrabysequencing.org/tiki/tiki-index.php?page=Setting+Up+Moa+Coding+Environment+in+Debian)
