@@ -1,0 +1,12 @@
+cat AllZeaPedigree20120708.txt | awk  'BEGIN {FS="\t";OFS="\t"}{if ((($5 + 0) != $5) && ($5 != "NA") && ($5 != "Contribution1")) {$1 = sprintf ("NA")}; print}' > AllZeaPedigree20120730.txt
+
+
+cat AllZeaPedigree20120708.txt | awk  'BEGIN {FS="\t";OFS="\t"}{if (($7 == .8) || ($7 == .85) || ($7 == .9) || ($7 == .95) || ($7 == .1)) print $2}' > AllZeaPedigree20120730.txt
+
+awk  'BEGIN {FS="\t";OFS="\t"}{if ((($7 + 0) == $7) && ($7 >= 0.8)) print $7}'
+
+Pull sample name and proportion missing from geno summary, calculate proportion present and print out both
+awk  'BEGIN {FS="\t";OFS="\t"}{if ((($5 + 0) == $5)) print (1+$1),$2,(1-$5)}'
+
+Put list of samples from file 1 into an array, match against field 1 in file 2 print line from file 2 if match. (can have more than 2 files, files 2+ will be checked)
+awk 'BEGIN{FS=":";OFS=":"} NR==FNR{arrfile1[$1];next}$1 in arrfile1'  ./newlist.txt ./output_test.txt 
