@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## Traverse to each moa directory and reconstruct moa instance
-## The moa constuctor also fetches the remplate required from an additional yaml field
+## The moa constuctor also fetches the template required from an additional yaml field
 ## via  `moa new f [template]` 
 
 base=$(pwd)
