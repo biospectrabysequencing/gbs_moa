@@ -1,0 +1,159 @@
+@startuml
+title <b>GBS Reference Pipeline HapMap and VCF</b>
+
+
+object DirectoryStructure {
+  GlobalVariables = "Base Path"
+  LocalVariables = "Dependent on What to run"
+}
+
+object FastqToTagCountPlugin {
+  GlobalVariables = "Base Path, Tassel Path, MinRam, MaxRam, Keyfile, Enzyme"
+  LocalVariables = "Plugin Output Path, -s Maximum Good Reads per lane, -c Minimum Tag Count"
+}
+
+object MergeMultipleTagCountPlugin {
+  GlobalVariables = "Base Path, Tassel Path, MinRam, MaxRam"
+  LocalVariables = "Plugin Output Path, -o Output File Name, -c Minimum Tag Count"
+  OptionalVariables = "-t output in fastq text format - if not set outputs in binary cnt format"
+}
+
+object TagCountToFastqPlugin {
+  GlobalVariables = "Base Path, Tassel Path, MinRam, MaxRam"
+  LocalVariables = "InputPath, Plugin Output Path, -o Output File Name, -c Minimum Tag Count"
+}
+
+object AlignToGenome {
+  GlobalVariables = "Base Path, Aligner, Aligner Path, Reference Genome Path"
+  LocalVariables = "Input Path, Output Path, Aligner flags "
+}
+
+object SAMConverterPlugin {
+  GlobalVariables = "Base Path, Tassel Path, MinRam, MaxRam"
+  LocalVariables = "InputPath, Plugin Output Path, -o Output File Name"
+}
+
+object FastqToTBTPlugin {
+  GlobalVariables = "Base Path, Tassel Path, MinRam, MaxRam, Keyfile Path, TagCountFile Path, Enzyme"
+  LocalVariables = "InputPath, Plugin Output Path, Output File Name, Upper Bound"
+}
+
+object MergeTagsByTaxaFilesPlugin {
+  GlobalVariables = "Base Path, Tassel Path, MinRam, MaxRam"
+  LocalVariables = "InputPath, Plugin Output Path, Output File Name, -s Maximum number of Tags \n-x Merge tag counts of taxa with identical short names --off by default"
+  Function = "Merge Multiple TBTbyte into 1 TBTbyte"
+}
+
+object TagsToSNPByAlignmentPlugin {
+  GlobalVariables = "Base Path, Tassel Path, MinRam, MaxRam"
+  LocalVariables = "InputPath, Plugin Output Path, Output File Name, start chromosome,\n end chromosome, minF, minMAF, minMAC, MinLCov, Include Rare, Include Gaps"
+}
+
+
+object MergeDuplicateSNPsPlugin {
+  GlobalVariables = "Base Path, Tassel Path, MinRam, MaxRam"
+  LocalVariables = "InputPath, Plugin Output Path, Output File Name, start chromosome, end chromosome"
+}
+
+object GBSHapMapFiltersPlugin {
+  GlobalVariables = "Base Path, Tassel Path, MinRam, MaxRam"
+  LocalVariables = "InputPath, Plugin Output Path, Output File Name, \nstart chromosome, end chromosome, MinTaxaCoverage, Min Presence, \nMinF, MNFAF, MXMAF, -mnR2, -mnBonP"
+}
+
+object tbt2vcfPlugin {
+  GlobalVariables = "Base Path, Tassel Path, MinRam, MaxRam"
+  LocalVariables = "Input tbt file, Plugin Output Path, start chromosome, end chromosome, \n-ak Maximum number of alleles kept for each marker across pop (default 3),  \nMNFAF, Minimum locus coverage"
+}
+
+object Keyfile {
+Bar code / Sample Key
+}
+
+object Fastq.gz {
+One or Many
+}
+object Files {
+
+Fastq files\n Key File\n Reference Genome
+}
+
+object TagCount {
+Tag Count Files
+}
+
+object MasterTagCount {
+All tags.\n Minimum Cutoff Set
+}
+
+object TagFastq {
+All tags in Fastq Format
+}
+
+object ReferenceGenome {
+}
+
+object Alignment {
+SAM formated Alignment
+}
+
+object TOPM {
+Tags on Physical Map
+}
+
+object TBTbyte {
+Intial TBTbyte File(s)
+}
+
+object MergedTBTbyte {
+Merged TBTbyte if needed
+}
+
+object HapMap {
+HapMap Files 1 \nper Chromosome
+}
+
+object VCF {
+VCF SNP Calls with Dept (max 127)
+}
+
+DirectoryStructure --|> FastqToTagCountPlugin
+FastqToTagCountPlugin --|> MergeMultipleTagCountPlugin
+MergeMultipleTagCountPlugin --|> TagCountToFastqPlugin
+TagCountToFastqPlugin --|> AlignToGenome 
+note left of AlignToGenome : Consider a salt in Bowtie2 for reproducability
+AlignToGenome --|> SAMConverterPlugin
+SAMConverterPlugin --|> FastqToTBTPlugin
+FastqToTBTPlugin --|> MergeTagsByTaxaFilesPlugin
+MergeTagsByTaxaFilesPlugin --|>  TagsToSNPByAlignmentPlugin
+tbt2vcfPlugin <|- MergeTagsByTaxaFilesPlugin : Alternate path for SNP calling with VCF output.
+TagsToSNPByAlignmentPlugin --|> MergeDuplicateSNPsPlugin
+MergeDuplicateSNPsPlugin --|> GBSHapMapFiltersPlugin
+
+Files . DirectoryStructure
+DirectoryStructure . Fastq.gz
+FastqToTagCountPlugin . TagCount
+Fastq.gz ..|> TagCount
+Keyfile ..|> TagCount
+MergeMultipleTagCountPlugin . MasterTagCount
+TagCount ..|> MasterTagCount
+TagCountToFastqPlugin . TagFastq
+MasterTagCount ..|> TagFastq
+AlignToGenome . Alignment
+ReferenceGenome .|> Alignment
+TagFastq ..|> Alignment
+SAMConverterPlugin . TOPM
+Alignment ..|> TOPM
+FastqToTBTPlugin . TBTbyte
+Fastq.gz ..|> TBTbyte
+MasterTagCount ..|> TBTbyte
+Keyfile ..|> TBTbyte
+MergeTagsByTaxaFilesPlugin . MergedTBTbyte
+TBTbyte ..|> MergedTBTbyte
+
+TagsToSNPByAlignmentPlugin . HapMap
+TOPM ..|> HapMap
+MergedTBTbyte ..|> HapMap
+tbt2vcfPlugin .. VCF
+TOPM ..|> VCF
+MergedTBTbyte ..|> VCF
+@enduml
