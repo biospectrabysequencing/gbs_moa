@@ -8,8 +8,8 @@
             <mnF>0.8</mnF>
             <mnMAF>0.02</mnMAF>
             <mnMAC>100000</mnMAC>
-            <s>9</s>
-            <e>10</e>
+            <sC>9</sC>
+            <eC>10</eC>
         </TagsToSNPByAlignmentPlugin>
     </fork1>
     <runfork1/>

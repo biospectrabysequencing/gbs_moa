@@ -1,4 +1,4 @@
 jobid: 04_PivotMergedTaxaTBT
-process: run_pipeline.pl  -Xms512m -Xmx1g -configFile ./PivotTaxaTBTHDF5.xml
-title: Pivot the tbt to prepare for SNP calling
+process: run_pipeline.pl  -configFile ./PivotTaxaTBTHDF5.xml
 template: simple
+title: Pivot the tbt to prepare for SNP calling

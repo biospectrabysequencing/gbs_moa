@@ -4,7 +4,6 @@
         <ModifyTBTHDF5Plugin>
             <o>../01_IndividualTBT/GBS_Workshop_Maize.h5</o>
             <p>./PivotTaxaTBTHDF5.h5</p>
-            <L>./PivotTaxaTBTHDF5.log</L>
             <c></c>
         </ModifyTBTHDF5Plugin>
     </fork1>
