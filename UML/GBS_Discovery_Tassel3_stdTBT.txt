@@ -65,6 +65,16 @@ object tbt2vcfPlugin {
   LocalVariables = "Input tbt file, Plugin Output Path, start chromosome, end chromosome, \n-ak Maximum number of alleles kept for each marker across pop (default 3),  \nMNFAF, Minimum locus coverage"
 }
 
+object MergeDuplicateSNP_vcf_Plugin {
+  GlobalVariables = "Base Path, Tassel Path, MinRam, MaxRam"
+  LocalVariables = "Input VCF file, output VCF file, maximum number of alleles kept at each marker location"
+}
+
+object MergeDuplicateTaxa_vcf_Plugin {
+  GlobalVariables = "Base Path, Tassel Path, MinRam, MaxRam"
+  LocalVariables = "Input VCF file template, output VCF file template,\n maximum number of alleles kept at each marker location. start chromosome, end chromosome"
+}
+
 object Keyfile {
 Bar code / Sample Key
 }
@@ -112,8 +122,20 @@ object HapMap {
 HapMap Files 1 \nper Chromosome
 }
 
+object HapMapMergedSNPs {
+Watson and Crick Strand\nidentical SNPs merged
+}
+
 object VCF {
 VCF SNP Calls with Dept (max 127)
+}
+
+object VCFMergedSNPs {
+Watson and Crick Strand\nidentical SNPs merged
+}
+
+object VCFMergedTaxa {
+Identical Taxa Merged\nwhat does identical mean?
 }
 
 DirectoryStructure --|> FastqToTagCountPlugin
@@ -128,6 +150,8 @@ MergeTagsByTaxaFilesPlugin --|>  TagsToSNPByAlignmentPlugin
 tbt2vcfPlugin <|- MergeTagsByTaxaFilesPlugin : Alternate path for SNP calling with VCF output.
 TagsToSNPByAlignmentPlugin --|> MergeDuplicateSNPsPlugin
 MergeDuplicateSNPsPlugin --|> GBSHapMapFiltersPlugin
+tbt2vcfPlugin --|> MergeDuplicateSNP_vcf_Plugin
+MergeDuplicateSNP_vcf_Plugin --|> MergeDuplicateTaxa_vcf_Plugin
 
 Files . DirectoryStructure
 DirectoryStructure . Fastq.gz
@@ -149,11 +173,17 @@ MasterTagCount ..|> TBTbyte
 Keyfile ..|> TBTbyte
 MergeTagsByTaxaFilesPlugin . MergedTBTbyte
 TBTbyte ..|> MergedTBTbyte
+MergeDuplicateSNPsPlugin . HapMapMergedSNPs
 
 TagsToSNPByAlignmentPlugin . HapMap
 TOPM ..|> HapMap
 MergedTBTbyte ..|> HapMap
+HapMap ..|> HapMapMergedSNPs
 tbt2vcfPlugin .. VCF
 TOPM ..|> VCF
 MergedTBTbyte ..|> VCF
+VCF ..|> VCFMergedSNPs
+MergeDuplicateSNP_vcf_Plugin . VCFMergedSNPs
+VCFMergedSNPs ..|> VCFMergedTaxa
+MergeDuplicateTaxa_vcf_Plugin . VCFMergedTaxa
 @enduml
