@@ -1,0 +1,371 @@
+---
+title: "Random Tag versus Standard GBS"
+author: "Marcus Davy"
+date: "Thursday, March 19, 2015"
+output:
+  ioslides_presentation: default
+  beamer_presentation: default
+---
+
+
+```{r globals, echo=FALSE, fig.width=300}
+## Test
+
+##<image src="images/Test.jpg" height="600px" />
+
+suppressWarnings(library(knitr))
+
+## S3 print method - https://github.com/yihui/knitr/blob/master/vignettes/knit_print.Rmd
+knit_print.data.frame <- function(x, options) {
+  res <- paste(c("", "", knitr::kable(x, output=FALSE)), collapse="\n")
+  asis_output(res)  
+  }
+```
+
+
+  
+  
+## Random Tag GBS (rtGBS)                         <!-- slide 2 -->
+
+
+* Developed new GBS wet bench protocol in Plant and Food
+  + Alternative to standard GBS (stdGBS) technique *(Elshire et al)*
+
+
+<table>
+<tr>
+<td>
+<font size=3>
+
+### stdGBS   
+* One PCR amplification
+* Two ligation steps
+* ~ 370 ng gDNA
+  
+### rtGBS                                         
+
+* Two PCR amplifications
+* One ligation step
+* ~ 28 ng gDNA  
+
+</font>
+</td>
+<td align="right">
+<image src="images/gbsComparison.jpg" height="330px"  />
+</td>
+</tr>
+</table>
+
+
+## Expt: stdGBS vs rtGBS in Kiwifruit <image src="images/BamHI.jpg" align="right" height="70px"/>  <!-- slide 3 -->
+
+* Used BamHI (6-mer) restriction enzyme (RE) 
+  + fewer cut sites in the genome than ApeKI
+  + higher coverage depth at sampled cut sites
+
+*HongYang* draft of genome released *(IKGC)*
+<table>
+<tr>
+<td >
+<font size=4>
+616 Mega bases in <br />haploid genome
+
+29 chromosomes + Chr 30
+
+26% of mapping incomplete
+
+
+GC content 35%
+
+36% of genome is repetitive
+</font>
+</td>
+<td>
+<image src="images/kiwi_nature.png" height="280px"/>
+</td>
+</tr>
+</table>
+
+ 
+## Experimental design <image src="images/kiwifruit.jpg" align="right", width="100px" />   <!-- slide 4 -->
+  
+
+
+
+```{r echo=FALSE, results="hide"}
+## This code is unused
+## See html table below 
+Treatment <- c("2 Methods", "6 Genotypes (plants)", "2 Genomic DNA extractions", "4 Replicates", "2 PCR amplifications" )
+Levels    <- c("S, RT", "KFA ... KFF", "ext_1, ext_2", "rep_1, ... rep_4", "Lane1, Lane2")
+Type      <- c("technical", "biological")
+
+x <- data.frame(Treatment=Treatment, Levels = Levels, Type=Type[c(1,2,2,1,1)])
+x
+```
+
+
+<!-- http://www.textfixer.com/html/csv-convert-table.php -->
+
+* *stdGBS* versus *rtGBS*
+* Interested in *sample* variability 
+
+<font size="4">
+<table width="700px">
+<tr bgcolor="#00CCFF"><td>Treatment</td><td>Levels</td><td>Type</td></tr>
+<tr><td>2 Methods</td><td>S, RT</td><td>technical</td></tr>
+<tr><td>6 Genotypes (plants)</td><td>KFA ... KFF</td><td>biological</td></tr>
+<tr><td>2 Genomic DNA extractions</td><td>ext_1, ext_2</td><td>biological</td></tr>
+<tr><td>4 replicates</td><td>rep_1 ... rep_4</t><td>technical</td></tr>
+<tr><td>2 PCR amplifications</td><td>Lane1, Lane2</td><td>technical</td></tr>
+</table>
+</font>
+
+<image src="images/exptDesign.jpg" height="200px" />
+
+$\rightarrow 2 \times 96$ well plates = $192$ samples
+
+## Alignments to Kiwifruit *HongYang*<!-- slide 5 -->
+
+* Forward AND/OR reverse complement reads
+
+<image src="images/ensembl.jpg" width="750px"/>
+
+* Find *Tag* sites in 192 Bam files
+
+<font size=3 color="blue">$ perl gbsSites.pl -out [OUTFILE.txt] [BAM FILES]</font>
+```
+      Sample Chromosome Position Reads fwdReads revCompReads 
+1 RT-KFA_1_1          1     8312     2        0            2
+2 RT-KFA_1_1          1    17201   708      708            0
+3 RT-KFA_1_1          1    26052     1        1            0
+                          ...
+
+```
+ 
+## Aligned Coverage depth                                        <!-- slide 6 -->
+
+* Depth $\ge 10$ for detecting SNPs
+
+<table>
+<tr align="center">
+<td>
+<font size="4">One sample KFA_1_1</font>
+</td>
+<td >
+<font size="4">All samples</font>
+</td>
+</tr>
+<tr align="center">
+<td>
+&nbsp;
+</td>
+<td >
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+<image src="images/Depth_KFA_1_1.png" height="250px" /> 
+</td>
+<td>
+<image src="images/Depth_KF._[12]_[1234].png" height="250px" />
+</td>
+</tr>
+</table>
+
+$\sim$uniform in stdGBS
+
+$\rightarrow$ Many *Tag* sites containing only one read
+
+## BamHI sites in Kiwifruit genome                           <!-- slide 7 -->
+
+
+* 79,511 sites match BamHI GGATCC in reference genome  
+
+<image src="images/Population_fragments.png" height="350px" />
+
+Fragment size distribution $X \sim exp(\lambda)$ 
+
+
+## Fragment distributions                            <!-- slide 8 -->
+
+<center>All Samples</center>
+<image src="images/Fragment_KF._[12]_[1234].png" width="700px" />
+
+rtGBS also samples from $X \sim exp(\lambda)$
+
+$\rightarrow$ Sampled less *Tag* sites *longer* fragments
+
+
+## log Fragment distributions
+
+<center>All Samples</center>
+<br />
+<image src="images/Fragment_log_KF._[12]_[1234].png"  width="700px" />
+
+$\rightarrow$ stdGBS distribution *bimodal*
+
+
+## Fragment Quantiles vs Population                         <!-- slide 9 -->
+
+<table>
+<tr align="center">
+<td>
+<font size="4">One sample RT-KFA_1_1</font>
+</td>
+<td >
+<font size="4">All samples</font>
+</td>
+</tr>
+<tr align="center">
+<td>
+&nbsp;
+</td>
+<td >
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+<image src="images/quantile_KFA_1_1.png" height="260px" />
+</td>
+<td>
+<image src="images/quantile_KF._[12]_[1234].png" height="260px" />
+</td>
+</tr>
+</table>
+
+* rtGBS reduced size selection bias
+
+
+
+## Aligned Tags to genome                  <!-- slide 10 -->
+
+<center>stdGBS < rtGBS</center>
+
+<table>
+<tr>
+<td>
+<image src="images/heatmap_Lane1.png" height="350px" />
+</td>
+<td>
+<image src="images/heatmap_Lane2.png" height="350px" />
+</td>
+</tr>
+</table>
+* RT-KFF sample yields low
+* S-KFD sample yields low *(lane 2)*
+
+  $\rightarrow$ variability between samples
+
+## Linear Mixed Model: Tag Counts
+
+$\sqrt{Y_{ijklm}} = \mu + M_i + P_j + E_k + S_l + L_m + PM_{ij} + \epsilon_{ijklm}$
+<font size=3>
+
+<table>
+<tr>
+<td>*Fixed effects*</td>
+<td>*Random effects*</td>
+</tr>
+<tr>
+<td>
+
+<table width="400px">
+<tr><td>Treatment</td><td>Levels</td><td>Estimate</td><td>Std error</td></tr>
+<tr><td>Method</td><td>S</td><td>136.14</td><td>4.228</td></tr>
+<tr><td></td><td>RT</td><td>178.42</td><td>4.228</td></tr>
+<tr><td>Lane</td><td>Lane1</td><td>158.49</td><td>3.05</td></tr>
+<tr><td></td><td>Lane2</td><td>156.07</td><td>3.05</td></tr>
+</table>
+
+</td>
+<td>
+
+<table width="400px">
+<tr><td></td></tr>
+<tr><td>Stratum</td><td>Estimate</td><td>Std error</td></tr>
+<tr><td>Plant</td><td>1e-04</td><td>0</td></tr>
+<tr><td>Plant:Method</td><td>102.9122</td><td>47.9252</td></tr>
+<tr><td>Sample:Extract(Plant)</td><td>9.3017</td><td>5.0445</td></tr>
+<tr><td>Residual</td><td>50.9044</td><td>6.1509</td></tr>
+<tr><td></td></tr>
+</table>
+
+
+</td>
+</tr>
+<tr>
+<td>
+<image src="images/KS_Counts.png" height="350px" />
+</td>
+<td align="left">
+Two-sample Kolmogorov-Smirnov<br />
+p-value < 2.2e-16
+
+*Significantly different counts between Methods*
+</td>
+</tr>
+</table>
+
+
+</font>
+
+## Aligned filtered Tags to genome   <image src="images/KS_Counts_Filtered.png" align="right" height="150px" />              <!-- slide 11 -->
+
+<center>*Tags* $\ge$ 10 coverage depth</center>
+<table>
+<tr>
+<td>
+<image src="images/heatmap_Lane1_Filtered.png" height="350px" />
+</td>
+<td>
+<image src="images/heatmap_Lane2_Filtered.png" height="350px" />
+</td>
+</tr>
+</table>
+* RT-KFF sample yields low
+* S-KFD sample yields low *(lane 2)*
+
+## Sample Tags versus Population                       <!-- slide 12 -->
+
+* Higher number of *Tag* sites sampled by rtGBS method (green)
+
+<table>
+<tr>
+<td align="center">
+<font size="4">One sample RT-KFA_1_1</font>
+</td>
+</tr>
+<tr>
+<td>
+<image src="images/Venn_KFA_1_1.png" height="350px" />
+</td>
+</tr>
+</table>
+
+* SNPs in restriction sites 2185 *stdGBS*, 10540 *rtGBS*
+
+
+## Summary                                <!-- slide 13 -->
+
+### Advantages of rtGBS technique
+* Order of magnitude less gDNA required 
+* Increased number of *Tag* sites sampled 
+* Reduced size selection bias sampling *Tag* sites
+
+### Future work
+* Draft publication
+* Wet bench automation to reduce sample variability
+
+
+
+
+## Acknowledgements                              <!-- slide 13 -->
+
+* Elena Hilario
+* Lorna Barron
+* Cecilia Deng
+* Paul Datson
+* Nihal De Silva
+* Roy Storey
