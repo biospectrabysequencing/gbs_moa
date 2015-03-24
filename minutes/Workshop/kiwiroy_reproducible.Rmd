@@ -2,12 +2,12 @@
 title: "Collaborate and Replicate"
 author: "Roy Storey"
 date: "18/03/2015"
-bibliography: kiwiroy_references.bib
 output:
   ioslides_presentation:
     widescreen: yes
   beamer_presentation: default
   slidy_presentation: default
+bibliography: kiwiroy_references.bib
 ---
 
 ## Collaborate and Replicate
@@ -142,6 +142,7 @@ From simple bash data wrangling to map and reduce across a cluster
 * Templates are expanded based on the values of variables
 * Research activity can be tracked within git
 * Enables iterative and automatic workflow
+* Job Scheduler agnostic
 
 ## Usage
 
