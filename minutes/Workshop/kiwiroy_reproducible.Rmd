@@ -1,18 +1,68 @@
 ---
-title: "GitHub and Moa"
+title: "Collaborate and Replicate"
 author: "Roy Storey"
 date: "18/03/2015"
-output: ioslides_presentation
+output:
+  ioslides_presentation:
+    widescreen: yes
+  beamer_presentation: default
+  slidy_presentation: default
 ---
 
 ## Intro
 
+- Reproducible Research
+- using [GitHub](http://github.com)
+- using [Moa](https://github.com/mfiers/moa)
+
+## The Reproducibility Spectrum
+
+![Spectrum](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3383002/bin/nihms382015f1.jpg)
+
+<div align=right><span style="font-size: 0.5em">Image from *doi: [10.1126/science.1213847](http://dx.doi.org/10.1126/science.1213847)*</span></div>
+
+### aim
+
+* towards right hand side
+* evaluate findings
+* journals also moving this way
+
+## Best Practices
+
+* Wilson G, Aruliah DA, Brown CT, Chue Hong NP, Davis M, et al. (2014) Best Practices for Scientific Computing. PLoS Biol 12(1): e1001745. doi: [10.1371/journal.pbio.1001745](http://dx.doi.org/10.1371/journal.pbio.1001745)
+
+* Write programs for people, not computers. (literate programming)
+* Make incremental changes.
+    + Use a **version control system**.
+* Collaborate.
+    + Use pre-merge code reviews.
+    + Use pair programming when bringing someone new up to speed and when tackling particularly tricky problems.
+    + Use an issue tracking tool.
+* Don't repeat yourself (or others).
+    + Every piece of data must have a single authoritative representation in the system.
+    + Modularize code rather than copying and pasting.
+    + Re-use code instead of rewriting it.
+
+
+##
+
 - Using GitHub
-   + collaboration
-   + cross company 
-   + open source license
+    + collaboration cross company 
+    + AGPL open source license
+    + github flow / tasks
+    + success of GitHub
 - Moa
-   + 
+    + reproducible research
+
+
+##
+
+![github](images/githuboctocat.jpg)
+
+* Hosted solution
+* Administration
+* Network traversal
+
 
 ## Reproducible Research
 
@@ -20,11 +70,13 @@ output: ioslides_presentation
 - Tools
 - Behaviour
 
-## The Reproducibility Spectrum
-
-![Spectrum](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3383002/bin/nihms382015f1.jpg)
 
 ## Summary of Best Practices
+
+
+
+
+Wilson G, Aruliah DA, Brown CT, Chue Hong NP, Davis M, et al. (2014) Best Practices for Scientific Computing. PLoS Biol 12(1): e1001745. doi:10.1371/journal.pbio.1001745
 
 1. Write programs for people, not computers.
     + A program should not require its readers to hold more than a handful of facts in memory at once.
@@ -80,7 +132,17 @@ ls -l
 
 ## Moa
 
-- Command line magic
+*Command line workflows in bioinformatics*
+
+
+* Organized:
+
+Moa facilitates project organization in many (smaller and more major) ways by providing a uniform way to capture commands as Moa jobs. Each Moa job is linked to a specific directory, which contains all configuration, template, data, and intermediate data available as files within the directory structure.
+
+* Documented
+* Reproducible
+* Reusable & Shareable:
+* Flexible:
 
 ## Automation
 
@@ -90,6 +152,11 @@ ls -l
 ## Summary
 
 
+## Extras
+
+* reduce barriers to collaboration
+* UX
+
 ## Acknowledgements
 
-
+![NZGL](images/NZGL-logo.jpg)
