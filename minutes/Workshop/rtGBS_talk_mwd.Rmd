@@ -27,7 +27,7 @@ knit_print.data.frame <- function(x, options) {
 ## Random Tag GBS (rtGBS)                         <!-- slide 2 -->
 
 
-* Developed new GBS wet bench protocol in *Plant and Food Research*
+* Modified GBS wet bench protocol at *Plant and Food Research*
 * Alternative to standard GBS (stdGBS) technique *(Elshire et al)*
 
 
@@ -141,8 +141,10 @@ $ perl gbsSites.pl -out [OUTFILE.txt] [BAM FILES]</font>
 2 RT-KFA_1_1          1    17201   708      708            0
 3 RT-KFA_1_1          1    26052     1        1            0
                           ...
-
+                ~ 4.8 Million Tag sites
 ```
+
+
  
 ## Aligned Coverage depth                                        <!-- slide 6 -->
 
@@ -183,7 +185,7 @@ $\rightarrow$ Many *Tag* sites containing only one read
 
 
 * Population estimate ~79,511 BamHI sites (GGATCC) in reference genome 
-* Under estimate, genomes not complete
+* Under estimate, genome incomplete
 <center><image src="images/Population_fragments.png" height="350px" /></center>
 
 Fragment size distribution $X \sim exp(\lambda)$ 
