@@ -4,7 +4,6 @@ author: "Marcus Davy"
 date: "Thursday, March 19, 2015"
 output:
   ioslides_presentation: default
-  beamer_presentation: default
 ---
 
 
@@ -28,8 +27,8 @@ knit_print.data.frame <- function(x, options) {
 ## Random Tag GBS (rtGBS)                         <!-- slide 2 -->
 
 
-* Developed new GBS wet bench protocol in Plant and Food
-  + Alternative to standard GBS (stdGBS) technique *(Elshire et al)*
+* Modified GBS wet bench protocol at *Plant and Food Research*
+* Alternative to standard GBS (stdGBS) technique *(Elshire et al)*
 
 
 <table>
@@ -59,9 +58,10 @@ knit_print.data.frame <- function(x, options) {
 
 ## Expt: stdGBS vs rtGBS in Kiwifruit <image src="images/BamHI.jpg" align="right" height="70px"/>  <!-- slide 3 -->
 
-* Used BamHI (6-mer) restriction enzyme (RE) 
-  + fewer cut sites in the genome than ApeKI
-  + higher coverage depth at sampled cut sites
+Used BamHI (6-mer) restriction enzyme (RE) 
+
+* fewer cut sites in the genome than ApeKI
+* higher coverage depth at sampled cut sites
 
 *HongYang* draft of genome released *(IKGC)*
 <table>
@@ -106,8 +106,7 @@ x
 
 <!-- http://www.textfixer.com/html/csv-convert-table.php -->
 
-* *stdGBS* versus *rtGBS*
-* Interested in *sample* variability 
+* Aim: Compare *stdGBS* versus *rtGBS*
 
 <font size="4">
 <table width="700px">
@@ -120,31 +119,36 @@ x
 </table>
 </font>
 
+$\rightarrow 2 \times 96$ well plates = $192$ samples
+
 <image src="images/exptDesign.jpg" height="200px" />
 
-$\rightarrow 2 \times 96$ well plates = $192$ samples
+* Interested in sources of *sample* variability 
 
 ## Alignments to Kiwifruit *HongYang*<!-- slide 5 -->
 
-* Forward AND/OR reverse complement reads
+* Data: Forward AND/OR reverse complement reads
 
 <image src="images/ensembl.jpg" width="750px"/>
 
-* Find *Tag* sites in 192 Bam files
+* Find *Tag* site coordinates and coverage depth in 192 *Bam* files
 
-<font size=3 color="blue">$ perl gbsSites.pl -out [OUTFILE.txt] [BAM FILES]</font>
+<font size=3 color="blue">
+$ perl gbsSites.pl -out [OUTFILE.txt] [BAM FILES]</font> 
 ```
       Sample Chromosome Position Reads fwdReads revCompReads 
 1 RT-KFA_1_1          1     8312     2        0            2
 2 RT-KFA_1_1          1    17201   708      708            0
 3 RT-KFA_1_1          1    26052     1        1            0
                           ...
-
+                ~ 4.8 Million Tag sites
 ```
+
+
  
 ## Aligned Coverage depth                                        <!-- slide 6 -->
 
-* Depth $\ge 10$ for detecting SNPs
+* Depth $\ge 10$ for detecting SNPs <font color="red">*(vertical line)*</font>
 
 <table>
 <tr align="center">
@@ -177,17 +181,17 @@ $\sim$uniform in stdGBS
 
 $\rightarrow$ Many *Tag* sites containing only one read
 
-## BamHI sites in Kiwifruit genome                           <!-- slide 7 -->
+## Fragment distribution in Kiwi genome                        <!-- slide 7 -->
 
 
-* 79,511 sites match BamHI GGATCC in reference genome  
-
-<image src="images/Population_fragments.png" height="350px" />
+* Population estimate ~79,511 BamHI sites (GGATCC) in reference genome 
+* Under estimate, genome incomplete
+<center><image src="images/Population_fragments.png" height="350px" /></center>
 
 Fragment size distribution $X \sim exp(\lambda)$ 
 
 
-## Fragment distributions                            <!-- slide 8 -->
+## Fragment distributions in samples                           <!-- slide 8 -->
 
 <center>All Samples</center>
 <image src="images/Fragment_KF._[12]_[1234].png" width="700px" />
@@ -197,16 +201,18 @@ rtGBS also samples from $X \sim exp(\lambda)$
 $\rightarrow$ Sampled less *Tag* sites *longer* fragments
 
 
-## log Fragment distributions
+## log Fragment distributions...
 
 <center>All Samples</center>
 <br />
 <image src="images/Fragment_log_KF._[12]_[1234].png"  width="700px" />
 
-$\rightarrow$ stdGBS distribution *bimodal*
+* stdGBS distribution *bimodal*
+
+$\rightarrow$ size selection bias
 
 
-## Fragment Quantiles vs Population                         <!-- slide 9 -->
+## qqplot: log Fragment Samples vs Population                         <!-- slide 9 -->
 
 <table>
 <tr align="center">
@@ -239,7 +245,7 @@ $\rightarrow$ stdGBS distribution *bimodal*
 
 
 
-## Aligned Tags to genome                  <!-- slide 10 -->
+## # Aligned Tags to genome                  <!-- slide 10 -->
 
 <center>stdGBS < rtGBS</center>
 
@@ -311,7 +317,7 @@ p-value < 2.2e-16
 
 </font>
 
-## Aligned filtered Tags to genome   <image src="images/KS_Counts_Filtered.png" align="right" height="150px" />              <!-- slide 11 -->
+## # Aligned filtered Tags to genome   <image src="images/KS_Counts_Filtered.png" align="right" height="150px" />              <!-- slide 11 -->
 
 <center>*Tags* $\ge$ 10 coverage depth</center>
 <table>
@@ -327,7 +333,7 @@ p-value < 2.2e-16
 * RT-KFF sample yields low
 * S-KFD sample yields low *(lane 2)*
 
-## Sample Tags versus Population                       <!-- slide 12 -->
+## # Tags in Samples versus Population                       <!-- slide 12 -->
 
 * Higher number of *Tag* sites sampled by rtGBS method (green)
 
@@ -344,7 +350,8 @@ p-value < 2.2e-16
 </tr>
 </table>
 
-* SNPs in restriction sites 2185 *stdGBS*, 10540 *rtGBS*
+* SNPs/INDELS in restriction sites (wrt reference genome)
+* 2185 *stdGBS*, 10540 *rtGBS*
 
 
 ## Summary                                <!-- slide 13 -->

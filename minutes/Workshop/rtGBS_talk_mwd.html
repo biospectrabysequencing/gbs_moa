@@ -90,7 +90,7 @@
 <slide class=''><hgroup><h2>Random Tag GBS (rtGBS) <!-- slide 2 --></h2></hgroup><article  id="random-tag-gbs-rtgbs">
 
 <ul>
-<li>Developed new GBS wet bench protocol in Plant and Food</li>
+<li>Modified GBS wet bench protocol at <em>Plant and Food Research</em></li>
 <li>Alternative to standard GBS (stdGBS) technique <em>(Elshire et al)</em></li>
 </ul>
 
@@ -134,8 +134,9 @@
 
 </article></slide><slide class=''><hgroup><h2>Expt: stdGBS vs rtGBS in Kiwifruit <image src="images/BamHI.jpg" align="right" height="70px"/> <!-- slide 3 --></h2></hgroup><article  id="expt-stdgbs-vs-rtgbs-in-kiwifruit">
 
+<p>Used BamHI (6-mer) restriction enzyme (RE)</p>
+
 <ul>
-<li>Used BamHI (6-mer) restriction enzyme (RE)</li>
 <li>fewer cut sites in the genome than ApeKI</li>
 <li>higher coverage depth at sampled cut sites</li>
 </ul>
@@ -175,8 +176,7 @@
 <!-- http://www.textfixer.com/html/csv-convert-table.php -->
 
 <ul>
-<li><em>stdGBS</em> versus <em>rtGBS</em></li>
-<li>Interested in <em>sample</em> variability</li>
+<li>Aim: Compare <em>stdGBS</em> versus <em>rtGBS</em></li>
 </ul>
 
 <font size="4">
@@ -317,35 +317,39 @@ technical
 
 <p></font></p>
 
+<p>\(\rightarrow 2 \times 96\) well plates = \(192\) samples</p>
+
 <p><image src="images/exptDesign.jpg" height="200px" /></p>
 
-<p>\(\rightarrow 2 \times 96\) well plates = \(192\) samples</p>
+<ul>
+<li>Interested in sources of <em>sample</em> variability</li>
+</ul>
 
 </article></slide><slide class=''><hgroup><h2>Alignments to Kiwifruit <em>HongYang</em><!-- slide 5 --></h2></hgroup><article  id="alignments-to-kiwifruit-hongyang">
 
 <ul>
-<li>Forward AND/OR reverse complement reads</li>
+<li>Data: Forward AND/OR reverse complement reads</li>
 </ul>
 
 <p><image src="images/ensembl.jpg" width="750px"/></p>
 
 <ul>
-<li>Find <em>Tag</em> sites in 192 Bam files</li>
+<li>Find <em>Tag</em> site coordinates and coverage depth in 192 <em>Bam</em> files</li>
 </ul>
 
-<p><font size=3 color="blue">$ perl gbsSites.pl -out [OUTFILE.txt] [BAM FILES]</font></p>
+<p><font size=3 color="blue"> $ perl gbsSites.pl -out [OUTFILE.txt] [BAM FILES]</font></p>
 
 <pre >      Sample Chromosome Position Reads fwdReads revCompReads 
 1 RT-KFA_1_1          1     8312     2        0            2
 2 RT-KFA_1_1          1    17201   708      708            0
 3 RT-KFA_1_1          1    26052     1        1            0
                           ...
-</pre>
+                ~ 4.8 Million Tag sites</pre>
 
 </article></slide><slide class=''><hgroup><h2>Aligned Coverage depth <!-- slide 6 --></h2></hgroup><article  id="aligned-coverage-depth">
 
 <ul>
-<li>Depth \(\ge 10\) for detecting SNPs</li>
+<li>Depth \(\ge 10\) for detecting SNPs <font color="red"><em>(vertical line)</em></font></li>
 </ul>
 
 <table>
@@ -404,17 +408,22 @@ technical
 
 <p>\(\rightarrow\) Many <em>Tag</em> sites containing only one read</p>
 
-</article></slide><slide class=''><hgroup><h2>BamHI sites in Kiwifruit genome <!-- slide 7 --></h2></hgroup><article  id="bamhi-sites-in-kiwifruit-genome">
+</article></slide><slide class=''><hgroup><h2>Fragment distribution in Kiwi genome <!-- slide 7 --></h2></hgroup><article  id="fragment-distribution-in-kiwi-genome">
 
 <ul>
-<li>79,511 sites match BamHI GGATCC in reference genome</li>
-</ul>
+<li>Population estimate ~79,511 BamHI sites (GGATCC) in reference genome</li>
+<li>Under estimate, genome incomplete
 
-<p><image src="images/Population_fragments.png" height="350px" /></p>
+<center>
+
+<image src="images/Population_fragments.png" height="350px" />
+
+</center></li>
+</ul>
 
 <p>Fragment size distribution \(X \sim exp(\lambda)\)</p>
 
-</article></slide><slide class=''><hgroup><h2>Fragment distributions <!-- slide 8 --></h2></hgroup><article  id="fragment-distributions">
+</article></slide><slide class=''><hgroup><h2>Fragment distributions in samples <!-- slide 8 --></h2></hgroup><article  id="fragment-distributions-in-samples">
 
 <center>
 
@@ -428,7 +437,7 @@ All Samples
 
 <p>\(\rightarrow\) Sampled less <em>Tag</em> sites <em>longer</em> fragments</p>
 
-</article></slide><slide class=''><hgroup><h2>log Fragment distributions</h2></hgroup><article  id="log-fragment-distributions">
+</article></slide><slide class=''><hgroup><h2>log Fragment distributions&#8230;</h2></hgroup><article  id="log-fragment-distributions...">
 
 <center>
 
@@ -438,9 +447,13 @@ All Samples
 
 <p><br /> <image src="images/Fragment_log_KF._[12]_[1234].png"  width="700px" /></p>
 
-<p>\(\rightarrow\) stdGBS distribution <em>bimodal</em></p>
+<ul>
+<li>stdGBS distribution <em>bimodal</em></li>
+</ul>
 
-</article></slide><slide class=''><hgroup><h2>Fragment Quantiles vs Population <!-- slide 9 --></h2></hgroup><article  id="fragment-quantiles-vs-population">
+<p>\(\rightarrow\) size selection bias</p>
+
+</article></slide><slide class=''><hgroup><h2>qqplot: log Fragment Samples vs Population <!-- slide 9 --></h2></hgroup><article  id="qqplot-log-fragment-samples-vs-population">
 
 <table>
 
@@ -498,7 +511,7 @@ All Samples
 <li>rtGBS reduced size selection bias</li>
 </ul>
 
-</article></slide><slide class=''><hgroup><h2>Aligned Tags to genome <!-- slide 10 --></h2></hgroup><article  id="aligned-tags-to-genome">
+</article></slide><slide class=''><hgroup><h2># Aligned Tags to genome <!-- slide 10 --></h2></hgroup><article  id="aligned-tags-to-genome">
 
 <center>
 
@@ -859,7 +872,7 @@ Residual
 
 <p></font></p>
 
-</article></slide><slide class=''><hgroup><h2>Aligned filtered Tags to genome <image src="images/KS_Counts_Filtered.png" align="right" height="150px" /> <!-- slide 11 --></h2></hgroup><article  id="aligned-filtered-tags-to-genome">
+</article></slide><slide class=''><hgroup><h2># Aligned filtered Tags to genome <image src="images/KS_Counts_Filtered.png" align="right" height="150px" /> <!-- slide 11 --></h2></hgroup><article  id="aligned-filtered-tags-to-genome">
 
 <center>
 
@@ -892,7 +905,7 @@ Residual
 <li>S-KFD sample yields low <em>(lane 2)</em></li>
 </ul>
 
-</article></slide><slide class=''><hgroup><h2>Sample Tags versus Population <!-- slide 12 --></h2></hgroup><article  id="sample-tags-versus-population">
+</article></slide><slide class=''><hgroup><h2># Tags in Samples versus Population <!-- slide 12 --></h2></hgroup><article  id="tags-in-samples-versus-population">
 
 <ul>
 <li>Higher number of <em>Tag</em> sites sampled by rtGBS method (green)</li>
@@ -923,7 +936,8 @@ Residual
 </table>
 
 <ul>
-<li>SNPs in restriction sites 2185 <em>stdGBS</em>, 10540 <em>rtGBS</em></li>
+<li>SNPs/INDELS in restriction sites (wrt reference genome)</li>
+<li>2185 <em>stdGBS</em>, 10540 <em>rtGBS</em></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>Summary <!-- slide 13 --></h2></hgroup><article  id="summary">
