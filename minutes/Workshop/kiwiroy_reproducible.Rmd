@@ -2,6 +2,7 @@
 title: "Collaborate and Replicate"
 author: "Roy Storey"
 date: "18/03/2015"
+bibliography: kiwiroy_references.bib
 output:
   ioslides_presentation:
     widescreen: yes
@@ -9,17 +10,19 @@ output:
   slidy_presentation: default
 ---
 
-## Intro
+## Collaborate and Replicate
+
+### Introduction
 
 - Reproducible Research
-- using [GitHub](http://github.com)
+- using [GitHub](http://github.com) for [Biospectra By Sequencing](https://github.com/biospectrabysequencing)
 - using [Moa](https://github.com/mfiers/moa)
 
 ## The Reproducibility Spectrum
 
 ![Spectrum](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3383002/bin/nihms382015f1.jpg)
 
-<div align=right><span style="font-size: 0.5em">Image from *doi: [10.1126/science.1213847](http://dx.doi.org/10.1126/science.1213847)*</span></div>
+<div align=right><span style="font-size: 0.5em">Image from [@peng2011]</span></div>
 
 ### aim
 
@@ -29,93 +32,46 @@ output:
 
 ## Best Practices
 
-* Wilson G, Aruliah DA, Brown CT, Chue Hong NP, Davis M, et al. (2014) Best Practices for Scientific Computing. PLoS Biol 12(1): e1001745. doi: [10.1371/journal.pbio.1001745](http://dx.doi.org/10.1371/journal.pbio.1001745)
+-------------------------------- | -------------------
+Program for people not computers | Plan for mistakes (test suites)
+Make the computer do the work    | Optimize when everything works
+Use version control for changes  | Document design and purpose
+Don't repeat yourself or others  | Collaborate
 
-* Write programs for people, not computers. (literate programming)
-* Make incremental changes.
-    + Use a **version control system**.
-* Collaborate.
-    + Use pre-merge code reviews.
-    + Use pair programming when bringing someone new up to speed and when tackling particularly tricky problems.
-    + Use an issue tracking tool.
-* Don't repeat yourself (or others).
-    + Every piece of data must have a single authoritative representation in the system.
-    + Modularize code rather than copying and pasting.
-    + Re-use code instead of rewriting it.
-
-
-##
-
-- Using GitHub
-    + collaboration cross company 
-    + AGPL open source license
-    + github flow / tasks
-    + success of GitHub
-- Moa
-    + reproducible research
-
+[@wilson2014]
 
 ##
 
 ![github](images/githuboctocat.jpg)
 
-* Hosted solution
-* Administration
-* Network traversal
+![science](images/github-science.png)
 
+* https://github.com/blog/1840-improving-github-for-science
 
-## Reproducible Research
+## GitHub growth
 
-- Tenants
-- Tools
-- Behaviour
+![user growth](images/github-growth.png)
 
+[@berkholz2013]
 
-## Summary of Best Practices
+## GitHub - is it really for us?
 
+### Reduce barriers to collaboration
 
+* Collaborate
+    + Multiple organisations (AgR, Massey, PFR, NZGL)
+    + Multiple sites (AKL, PN, TP)
+* Hosted and free
+* `git clone`
+* Network access and Administration
+* Markdown Documents (like this one)
+* Third party integrations
+* User experience
+* Metrics
 
+## Collaborate and Replicate
 
-Wilson G, Aruliah DA, Brown CT, Chue Hong NP, Davis M, et al. (2014) Best Practices for Scientific Computing. PLoS Biol 12(1): e1001745. doi:10.1371/journal.pbio.1001745
-
-1. Write programs for people, not computers.
-    + A program should not require its readers to hold more than a handful of facts in memory at once.
-    + Make names consistent, distinctive, and meaningful.
-    + Make code style and formatting consistent.
-2. Let the computer do the work.
-    + Make the computer repeat tasks.
-    + Save recent commands in a file for re-use.
-    + Use a build tool to automate workflows.
-3. Make incremental changes.
-    + Work in small steps with frequent feedback and course correction.
-    + Use a version control system.
-    + Put everything that has been created manually in version control.
-4. Don't repeat yourself (or others).
-    + Every piece of data must have a single authoritative representation in the system.
-    + Modularize code rather than copying and pasting.
-    + Re-use code instead of rewriting it.
-5. Plan for mistakes.
-    + Add assertions to programs to check their operation.
-    + Use an off-the-shelf unit testing library.
-    + Turn bugs into test cases.
-    + Use a symbolic debugger.
-6. Optimize software only after it works correctly.
-    + Use a profiler to identify bottlenecks.
-    + Write code in the highest-level language possible.
-7. Document design and purpose, not mechanics.
-    + Document interfaces and reasons, not implementations.
-    + Refactor code in preference to explaining how it works.
-    + Embed the documentation for a piece of software in that software.
-8. Collaborate.
-    + Use pre-merge code reviews.
-    + Use pair programming when bringing someone new up to speed and when tackling particularly tricky problems.
-    + Use an issue tracking tool.
-
-## Git
-
-- 
-
-## GitHub
+Propagate filesystem to all members
 
 ```{r engine="bash", results="hide", echo="FALSE"}
 ## https://support.rstudio.com/hc/communities/public/questions/200694007-rpostback-askpass
@@ -130,33 +86,83 @@ cd gbs_moa
 ls -l
 ```
 
+##
+
+![github flow](images/github-flow.png)
+
+* Conversations about changes (notifications)
+* Pull Request == Review
+    + quality control
+    + automated test/build
+    + peer pressure for poor code/docs/repetition etc...
+
+## Integrations
+
+* Project management
+    + http://waffle.io
+    + Tasks, issues and pull requests
+* Continuous Integration
+    + http://travis-ci.org, http://circleci.com, etc...
+    + Automation
+    + Plan for mistakes
+
+## Metrics
+
+![commits](images/bbs-commits.png)
+
+![clones](images/bbs-clones.png)
+
+## Challenges
+
+* Account management
+* Skills
+* Research output recognition?
+
 ## Moa
 
 *Command line workflows in bioinformatics*
 
-
+* Developed in Python by [@fiers2014]
 * Organized:
 
-Moa facilitates project organization in many (smaller and more major) ways by providing a uniform way to capture commands as Moa jobs. Each Moa job is linked to a specific directory, which contains all configuration, template, data, and intermediate data available as files within the directory structure.
+*Moa facilitates project organization in many (smaller and more major) ways by providing a uniform way to capture commands as Moa jobs. Each Moa job is linked to a specific directory, which contains all **configuration**, **template**, **data**, and intermediate data available as files within the directory structure.*
 
 * Documented
 * Reproducible
-* Reusable & Shareable:
-* Flexible:
+* Reusable & Shareable
+* Flexible
 
-## Automation
+From simple bash data wrangling to map and reduce across a cluster
 
-- Travis
-- Quality Control
+## Organisation
+
+* Use numeric directory naming for ordering of steps
+* Granularity of work within directory
+* Each directory has a template for the work
+* Templates are expanded based on the values of variables
+* Research activity can be tracked within git
+* Enables iterative and automatic workflow
+
+## Usage
+
+* `moa simple`
+* `moa new` - specify a template
+* `moa set` - set variables for expansion in templates
+* `moa show`
+* `moa status`
+* `moa run`
 
 ## Summary
 
+Many of the best practices of [@wilson2014] are achievable using GitHub and Moa.
 
-## Extras
+## Acknowledgements {.smaller}
 
-* reduce barriers to collaboration
-* UX
-
-## Acknowledgements
+* Helge Dzierzon
+* Rob Elshire
+* Mark Fiers 
+* Shane Sturrock
 
 ![NZGL](images/NZGL-logo.jpg)
+
+## References
