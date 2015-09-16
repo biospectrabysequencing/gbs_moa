@@ -13,5 +13,5 @@ use in the Quality control and sanity checking.
 
 Generic code
 ------------
-The goal is to create generic analysis scripts that are well documumented, and have a simple reproducible example
+The goal is to create generic analysis scripts that are well documented, and have a simple reproducible examples
 to run.
