@@ -4,6 +4,8 @@
 Prerequisites
 =============
 
+[![Join the chat at https://gitter.im/biospectrabysequencing/gbs_moa](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/biospectrabysequencing/gbs_moa?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 * [moa](https://github.com/mfiers/Moa)
 * perl [YAML::XS](http://search.cpan.org/dist/YAML-LibYAML/lib/YAML/XS.pod) module
 
